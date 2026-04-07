@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+*.sh
+*.bat
+/fsh-generated
+/input-cache
+/output
+/temp
+/template
+/translations
+*.index.db
+*.index.json
+sushi-config.yaml

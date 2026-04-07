@@ -1,0 +1,13 @@
+{
+    "name": "hl7.meddyg.template",
+    "version": "0.0.1",
+    "type": "fhir.template",
+    "license": "CC0-1.0",
+    "description": "A template for FHIR-based implementation guides that provide standards recommendations.",
+    "author": "https://meddyg.com",
+    "canonical": "http://github.com/meddyg/ig-template.git",
+    "base": "fhir2.base.template",
+    "dependencies": {
+        "fhir2.base.template": "current"
+    }
+}

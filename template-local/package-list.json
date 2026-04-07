@@ -1,0 +1,23 @@
+{
+    "package-id": "hl7.fhir.cr.meddyg.laboratory-results",
+    "title": "Guía de Implementación de Resultados de Laboratorio - MEDDYG",
+    "canonical": "http://hl7.org/fhir/cr/meddyg/laboratory-results",
+    "introduction": "Guía de Implementación de Resultados de Laboratorio desarrollada por MEDDYG, basada en la documentación para este caso de uso.",
+    "list": [
+        {
+            "version": "current",
+            "desc": "Continuous Integration Build (latest in version control)",
+            "path": "http://hl7.org/fhir/cr/meddyg/laboratory-results/",
+            "status": "ci-build",
+            "current": true
+        },
+        {
+            "version": "0.1.0",
+            "date": "2026-04-05",
+            "desc": "Initial STU ballot (April 2026 Ballot)",
+            "path": "http://hl7.org/fhir/cr/meddyg/laboratory-results/2026Apr/fsr.html",
+            "status": "ballot",
+            "sequence": "DSTU 1"
+        }
+    ]
+}
