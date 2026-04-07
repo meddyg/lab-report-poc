@@ -50,3 +50,6 @@ Description: "Perfil de paciente que define los datos del paciente necesarios pa
   * ^short = "Sexo del paciente"
 * gender from http://hl7.org/fhir/ValueSet/administrative-gender (required)
 
+// Elementos que no se incluyen en el perfil pero que pueden ser relevantes para resultados de laboratorio:
+* deceased[x] 0..0
+* link 0..0

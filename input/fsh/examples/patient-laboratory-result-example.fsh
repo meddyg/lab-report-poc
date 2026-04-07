@@ -5,7 +5,7 @@
 
 Instance: PatientLaboratoryResultExample
 InstanceOf: CRPatientLaboratoryResult
-Title: "Ejemplo: Paciente para Resultados de Laboratorio"
+Title: "Paciente para Resultados de Laboratorio"
 Description: "Ejemplo de un recurso Patient para representación de PoC resultados de laboratorio."
 Usage: #example
 

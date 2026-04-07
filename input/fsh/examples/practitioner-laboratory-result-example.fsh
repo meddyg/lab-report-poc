@@ -5,7 +5,7 @@
 
 Instance: PractitionerLaboratoryResultExample
 InstanceOf: CRPractitionerLaboratoryResult
-Title: "Ejemplo: Profesional de Salud para Resultados de Laboratorio"
+Title: "Profesional de Salud para Resultados de Laboratorio"
 Description: "Ejemplo de un recurso Practitioner para representación de PoC resultados de laboratorio."
 Usage: #example
 
