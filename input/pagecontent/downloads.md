@@ -1,4 +1,4 @@
-Esta página proporciona información sobre los recursos disponibles de la Guía de Implementación de Resultados de Laboratorio MeddyG | Siftia.
+Esta página proporciona información sobre los recursos disponibles de la Guía de Implementación de Resultados de Laboratorio Meddyg | Siftia.
 
 ### Recursos Disponibles
 
