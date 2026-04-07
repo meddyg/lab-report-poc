@@ -15,14 +15,14 @@ Description: "Modelo lógico que define los datos de la organización necesarios
 * ^publisher = "MEDDYG"
 
 * identificacion 1..* Identifier "Identificador de la organización."
-    "Identificador único de la organización, utilizado para su identificación en el sistema de salud. Puede incluir números de cédula jurídica, números de registro u otros identificadores relevantes." 
+    "Identificadores que permiten reconocer de forma inequívoca a la organización participante en el PoC, por ejemplo CCSS, hospital, EBAIS o laboratorio clínico. Pueden incluir cédula jurídica u otros identificadores institucionales."
 
 * tipoIdentificador 1..1 code "Tipo de identificador de la organización."
-    "Tipo de identificador utilizado para la organización, representado mediante un concepto de SNOMED CT u otro sistema de codificación relevante. Esto ayuda a clasificar el tipo de identificador, como cédula jurídica, número de registro, etc."
+    "Tipo del identificador organizacional utilizado para la entidad emisora o relacionada con el resultado. Permite interpretar si se trata de cédula jurídica, identificador institucional u otra clave organizacional."
 * tipoIdentificador from CRIdentifierTypesSet (required)
 
 * nombre 1..1 string "Nombre de la organización."
-    "El nombre de la organización, utilizado para su identificación. Es un campo obligatorio y debe contener el nombre oficial de la organización."
+    "Nombre oficial de la organización involucrada en el flujo del resultado de laboratorio, tal como debe presentarse a implementadores, repositorios, visores y documentos clínicos."
 
 * parteDe 0..1 Reference(Organization) "Organización a la que pertenece."
-    "Referencia a la organización a la que pertenece esta organización, si aplica. Esto es útil para representar jerarquías organizacionales, como un laboratorio que forma parte de un hospital más grande."   
+    "Referencia a la organización padre cuando exista una jerarquía organizacional, por ejemplo un laboratorio que depende de un hospital o un hospital que depende de la CCSS."

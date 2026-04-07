@@ -108,8 +108,14 @@ Usage: #example
 * entry[patient].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Patient/PatientLaboratoryResultExample"
 * entry[patient].resource = PatientLaboratoryResultExample
 
-* entry[organization].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Organization/OrganizationHospitalMexicoLabExample"
-* entry[organization].resource = OrganizationHospitalMexicoLabExample
+* entry[organization][0].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Organization/OrganizationHospitalMexicoLabExample"
+* entry[organization][0].resource = OrganizationHospitalMexicoLabExample
+
+* entry[organization][1].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Organization/OrganizationHospitalMexicoExample"
+* entry[organization][1].resource = OrganizationHospitalMexicoExample
+
+* entry[organization][2].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Organization/OrganizationCCSSExample"
+* entry[organization][2].resource = OrganizationCCSSExample
 
 * entry[practitioner].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Practitioner/PractitionerLaboratoryResultExample"
 * entry[practitioner].resource = PractitionerLaboratoryResultExample

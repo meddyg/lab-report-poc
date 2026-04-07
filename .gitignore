@@ -10,3 +10,6 @@ Thumbs.db
 /translations
 *.index.db
 *.index.json
+/docs
+*/**/__pycache__/
+*/**/*.pyc

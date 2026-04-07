@@ -12,7 +12,7 @@ Usage: #example
 
 * identifier
   * type = CRIdentifierTypeCodes#cedula-juridica "Cédula Jurídica"
-  * system = "https://www.ccss.sa.cr/identificador-organizacion"
+  * system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/ccss-organization-id"
   * value = "4-000-042147"
 
 * active = true
@@ -26,7 +26,7 @@ Usage: #example
 
 * identifier
   * type = CRIdentifierTypeCodes#cedula-juridica "Cédula Jurídica"
-  * system = "https://www.ccss.sa.cr/identificador-organizacion"
+  * system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/ccss-organization-id"
   * value = "3-101-000100"
 
 * active = true
@@ -41,7 +41,7 @@ Usage: #example
 
 * identifier
   * type = CRIdentifierTypeCodes#cedula-juridica "Cédula Jurídica"
-  * system = "https://www.ccss.sa.cr/identificador-organizacion"
+  * system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/ccss-organization-id"
   * value = "3-101-000100-LAB01"
 
 * active = true
@@ -56,7 +56,7 @@ Usage: #example
 
 * identifier
   * type = CRIdentifierTypeCodes#cedula-juridica "Cédula Jurídica"
-  * system = "https://www.ccss.sa.cr/identificador-organizacion"
+  * system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/ccss-organization-id"
   * value = "3-101-000200"
 
 * active = true
@@ -71,7 +71,7 @@ Usage: #example
 
 * identifier
   * type = CRIdentifierTypeCodes#cedula-juridica "Cédula Jurídica"
-  * system = "https://www.ccss.sa.cr/identificador-organizacion"
+  * system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/ccss-organization-id"
   * value = "3-101-000200-LAB01"
 
 * active = true

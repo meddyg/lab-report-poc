@@ -53,6 +53,8 @@ publisher:
 pages:
   index.md:
     title: Inicio
+  revision-semantica.md:
+    title: Relacion Semantica Bundle-PDF
   credits.md:
     title: Créditos
   downloads.md:
@@ -95,6 +97,7 @@ parameters:
 menu:
   Inicio: index.html
   Artefactos: artifacts.html
+  Revision Semantica: revision-semantica.html
   Créditos: credits.html
   Descargas: downloads.html
 

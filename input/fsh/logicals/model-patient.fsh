@@ -16,31 +16,31 @@ Description: "Modelo lógico que define los datos del paciente necesarios para r
 
 // ─── Datos generales del Paciente ─────────────────────────────────────    
 
-* identificacion 1..1 string "Reacción adversa"
-	"Descripción de la reacción adversa. Campo requerido. Máximo 200 caracteres alfanuméricos."
+* identificacion 1..1 string "Identificación principal del paciente."
+	"Valor principal del identificador con el que el paciente es reconocido dentro del PoC de resultados de laboratorio en Costa Rica. Debe corresponder al identificador utilizado por la organización emisora para vincular el resultado HbA1c con el expediente o registro correcto del paciente."
 
 * tipoIdentificador 1..1 code "Tipo de identificador del paciente."
-    "Tipo de identificador utilizado para el paciente, representado mediante un concepto de SNOMED CT u otro sistema de codificación relevante. Esto ayuda a clasificar el tipo de identificador, como cédula, número de seguro social, etc."
+    "Tipo de identificador con el que se captura la identificación principal del paciente, por ejemplo cédula nacional u otro identificador permitido por el ecosistema costarricense. Este dato permite a los implementadores interpretar correctamente el valor registrado en identificacion."
 * tipoIdentificador from CRIdentifierTypesSet (required)
 
 * primerNombre 1..1 string "Primer nombre del paciente."
-    "El primer nombre del paciente, utilizado para su identificación. Es un campo obligatorio y debe contener al menos un nombre."
+    "Primer nombre oficial del paciente, utilizado para identificación humana, conciliación visual y presentación del resultado HbA1c en sistemas clínicos o administrativos."
 
 * segundoNombre 0..1 string "Segundo nombre del paciente."
-    "El segundo nombre del paciente, utilizado para su identificación. Es un campo opcional y puede estar vacío."
+    "Segundo nombre del paciente cuando exista en los registros de la institución o del ecosistema de salud costarricense. Su uso mejora la identificación humana y la calidad documental."
 
 * primerApellido 1..1 string "Primer apellido del paciente."
-    "El primer apellido del paciente, utilizado para su identificación. Es un campo obligatorio y debe contener al menos un apellido."
+    "Primer apellido del paciente según el patrón de identificación personal utilizado en Costa Rica. Es obligatorio para la adecuada identificación administrativa y clínica."
 
 * segundoApellido 0..1 string "Segundo apellido del paciente."
-    "El segundo apellido del paciente, utilizado para su identificación. Es un campo opcional y puede estar vacío."
+    "Segundo apellido del paciente cuando aplique. En el contexto costarricense este dato suele ser relevante para la identificación completa de la persona y la correcta visualización del resultado de laboratorio."
 
 * fechaNacimiento 1..1 date "Fecha de nacimiento del paciente."
-    "La fecha de nacimiento del paciente, utilizada para calcular la edad y otros datos demográficos. Es un campo obligatorio."
+    "Fecha de nacimiento del paciente, usada para identificación demográfica, cálculo de edad y validaciones clínicas o administrativas asociadas al resultado HbA1c."
 
 * edad 1..1 positiveInt "Edad del paciente."
-    "La edad del paciente en años, calculada a partir de la fecha de nacimiento. Es un campo obligatorio y debe ser un número entero."    
+    "Edad del paciente expresada en años al momento del episodio o contexto del resultado de laboratorio. Se incluye para facilitar visualización o consumo en sistemas que aún requieren este dato de forma explícita."
 
 * sexo 1..1 code "Sexo del paciente."
-    "El sexo del paciente, utilizado para fines demográficos y clínicos. Es un campo obligatorio."
+    "Sexo administrativo del paciente, utilizado para interoperabilidad demográfica y como apoyo a la correcta identificación del sujeto del resultado HbA1c."
 * sexo from http://hl7.org/fhir/ValueSet/administrative-gender (required)

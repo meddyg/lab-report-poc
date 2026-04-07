@@ -35,6 +35,14 @@ Description: "Perfil de PractitionerRole para representar el contexto organizaci
 * code ^definition = "Clasificación funcional del rol del profesional dentro del contexto organizacional del laboratorio."
 
 * specialty 0..0
+* specialty ^short = "Sin especialidad en este PoC"
+* specialty ^definition = "La especialidad formal del profesional no se documenta en este perfil simplificado del PoC, ya que el contexto organizacional y el rol funcional son suficientes para el intercambio del resultado HbA1c."
 * contact 0..0
+* contact ^short = "Sin datos de contacto en este rol"
+* contact ^definition = "No se incluyen datos de contacto del rol profesional en el alcance actual del PoC, porque no son necesarios para transportar ni interpretar el resultado clínico."
 * availability 0..0
+* availability ^short = "Sin horarios de disponibilidad"
+* availability ^definition = "La disponibilidad horaria del rol profesional no se requiere para el intercambio de resultados de laboratorio de este PoC y por ello no se modela."
 * endpoint 0..0
+* endpoint ^short = "Sin endpoint asociado"
+* endpoint ^definition = "No se documentan endpoints técnicos ligados al rol profesional en este perfil, ya que el PoC se centra en la semántica clínica y organizacional del resultado HbA1c."

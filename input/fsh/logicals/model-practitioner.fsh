@@ -15,24 +15,24 @@ Description: "Modelo lógico que define los datos del profesional de salud neces
 * ^publisher = "MEDDYG"
 
 * identificacion 1..1 Identifier "Identificador del profesional de salud."
-    "Identificador único del profesional de salud, utilizado para su identificación en el sistema de salud. Puede incluir números de cédula, números de licencia u otros identificadores relevantes."
+    "Identificador principal del profesional de salud que participa en la emisión, validación o revisión del resultado HbA1c. Puede corresponder a cédula, licencia o identificador institucional según el escenario implementado."
 
 * tipoIdentificador 1..1 code "Tipo de identificador del profesional de salud."
-    "Tipo de identificador utilizado para el profesional de salud, representado mediante un concepto de SNOMED CT u otro sistema de codificación relevante. Esto ayuda a clasificar el tipo de identificador, como cédula, número de licencia, etc."
+    "Tipo del identificador con el que se registra al profesional de salud. Permite a los implementadores interpretar si el valor corresponde a cédula, licencia, identificador institucional u otra credencial válida en el contexto costarricense."
 * tipoIdentificador from CRIdentifierTypesSet (required)
 
 * primerNombre 1..1 string "Primer nombre del profesional de salud."
-    "El primer nombre del profesional de salud, utilizado para su identificación. Es un campo obligatorio y debe contener al menos un nombre."
+    "Primer nombre oficial del profesional de salud, utilizado para trazabilidad clínica, auditoría y presentación del emisor o validador del resultado."
 
 * segundoNombre 0..1 string "Segundo nombre del profesional de salud."
-    "El segundo nombre del profesional de salud, utilizado para su identificación. Es un campo opcional y puede estar vacío."
+    "Segundo nombre del profesional cuando exista en los registros institucionales. Su inclusión mejora la identificación humana en flujos clínicos y documentales."
 
 * primerApellido 1..1 string "Primer apellido del profesional de salud."
-    "El primer apellido del profesional de salud, utilizado para su identificación. Es un campo obligatorio y debe contener al menos un apellido."
+    "Primer apellido del profesional de salud, indispensable para identificar correctamente a la persona responsable del resultado HbA1c en el contexto costarricense."
 
 * segundoApellido 0..1 string "Segundo apellido del profesional de salud."
-    "El segundo apellido del profesional de salud, utilizado para su identificación. Es un campo opcional y puede estar vacío."
+    "Segundo apellido del profesional, útil para la identificación completa y la adecuada presentación del nombre en documentos clínicos del PoC."
 
 * sexo 1..1 code "Sexo del profesional de salud."
-    "El sexo del profesional de salud, utilizado para fines demográficos y clínicos. Es un campo obligatorio."
+    "Sexo administrativo del profesional de salud. Se incluye para mantener consistencia demográfica e interoperabilidad con perfiles base y sistemas externos."
 * sexo from http://hl7.org/fhir/ValueSet/administrative-gender (required)
