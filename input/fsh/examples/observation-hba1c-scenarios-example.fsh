@@ -8,6 +8,9 @@ Title: "Observation HbA1c - Tamizaje EBAIS"
 Description: "Ejemplo de observación HbA1c para tamizaje metabólico en primer nivel de atención de la CCSS con resultado dentro de rango esperado."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Resultado de HbA1c para tamizaje en EBAIS: 5.4%.</p></div>"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#4548-4
@@ -39,6 +42,9 @@ Title: "Observation HbA1c - Seguimiento EBAIS"
 Description: "Ejemplo de observación HbA1c para seguimiento ambulatorio en EBAIS con resultado elevado compatible con control subóptimo o prediabetes/diabetes según contexto clínico."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Resultado de HbA1c en seguimiento ambulatorio en EBAIS: 6.3%.</p></div>"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#4548-4
@@ -70,6 +76,9 @@ Title: "Observation HbA1c - Control Hospitalario"
 Description: "Ejemplo de observación HbA1c para paciente en seguimiento hospitalario con mal control metabólico."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Resultado de HbA1c en control hospitalario: 9.2%.</p></div>"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#4548-4

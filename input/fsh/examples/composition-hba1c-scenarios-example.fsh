@@ -8,6 +8,9 @@ Title: "Composition HbA1c - Tamizaje EBAIS"
 Description: "Ejemplo de Composition para documento clínico de tamizaje HbA1c emitido desde un EBAIS de la CCSS."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de tamizaje HbA1c emitido por EBAIS.</p></div>"
 * status = #final
 * type = $loinc#11502-2
 * subject = Reference(PatientHbA1cTamizajeEBAISExample)
@@ -24,6 +27,9 @@ Title: "Composition HbA1c - Seguimiento EBAIS"
 Description: "Ejemplo de Composition para documento clínico de seguimiento HbA1c en primer nivel de atención."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de seguimiento HbA1c en primer nivel de atención.</p></div>"
 * status = #final
 * type = $loinc#11502-2
 * subject = Reference(PatientHbA1cSeguimientoEBAISExample)
@@ -40,6 +46,9 @@ Title: "Composition HbA1c - Control Hospitalario"
 Description: "Ejemplo de Composition para documento clínico de resultado HbA1c emitido desde laboratorio hospitalario."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de resultado HbA1c emitido por laboratorio hospitalario.</p></div>"
 * status = #final
 * type = $loinc#11502-2
 * subject = Reference(PatientHbA1cHospitalControlExample)

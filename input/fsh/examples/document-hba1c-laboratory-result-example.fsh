@@ -9,6 +9,9 @@ Title: "Muestra HbA1c"
 Description: "Ejemplo de muestra para prueba HbA1c."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Muestra de sangre venosa para análisis de HbA1c.</p></div>"
 * status = #available
 * type = $snomed#122555007 "Venous blood specimen"
 * subject = Reference(PatientLaboratoryResultExample)
@@ -21,6 +24,9 @@ Title: "Rol Profesional Laboratorio Hospital México"
 Description: "Ejemplo de contexto organizacional del profesional que reporta resultados de laboratorio."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Rol profesional del laboratorio del Hospital México para reporte de HbA1c.</p></div>"
 * active = true
 * practitioner = Reference(PractitionerLaboratoryResultExample)
 * organization = Reference(OrganizationHospitalMexicoLabExample)
@@ -32,6 +38,9 @@ Title: "Resultado HbA1c"
 Description: "Ejemplo de observación de HbA1c en porcentaje."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Resultado de HbA1c en sangre venosa: 7.1%.</p></div>"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#4548-4
@@ -54,6 +63,9 @@ Title: "Reporte Diagnóstico HbA1c"
 Description: "Ejemplo de DiagnosticReport para resultado de laboratorio HbA1c."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Reporte de laboratorio de HbA1c con resultado superior al rango esperado.</p></div>"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $loinc#4548-4
@@ -72,6 +84,9 @@ Title: "Documento Clínico de Resultado HbA1c"
 Description: "Ejemplo de Composition que centra el documento clínico de laboratorio en HbA1c."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de resultados de laboratorio para prueba HbA1c.</p></div>"
 * status = #final
 * type = $loinc#11502-2
 * subject = Reference(PatientLaboratoryResultExample)

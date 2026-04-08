@@ -8,6 +8,9 @@ Title: "DiagnosticReport HbA1c - Tamizaje EBAIS"
 Description: "Ejemplo de DiagnosticReport para tamizaje HbA1c en primer nivel de atención de la CCSS."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Reporte de HbA1c para tamizaje en EBAIS con resultado dentro de rango.</p></div>"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $loinc#4548-4
@@ -27,6 +30,9 @@ Title: "DiagnosticReport HbA1c - Seguimiento EBAIS"
 Description: "Ejemplo de DiagnosticReport para seguimiento de paciente en EBAIS con resultado HbA1c alterado."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Reporte de HbA1c para seguimiento en EBAIS con resultado elevado.</p></div>"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $loinc#4548-4
@@ -46,6 +52,9 @@ Title: "DiagnosticReport HbA1c - Control Hospitalario"
 Description: "Ejemplo de DiagnosticReport emitido por laboratorio hospitalario para paciente con diabetes en seguimiento especializado."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Reporte de HbA1c en contexto hospitalario con control glucémico no adecuado.</p></div>"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $loinc#4548-4

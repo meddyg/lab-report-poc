@@ -8,6 +8,9 @@ Title: "Rol Profesional Laboratorio EBAIS Goicoechea 2"
 Description: "Ejemplo del rol organizacional del profesional que reporta resultados HbA1c desde un laboratorio de primer nivel de atención en la CCSS."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Rol del profesional responsable del reporte de HbA1c en laboratorio EBAIS.</p></div>"
 * active = true
 * practitioner = Reference(PractitionerLaboratoryResultExample)
 * organization = Reference(OrganizationEBAISGoicoechea2LabExample)
@@ -19,6 +22,9 @@ Title: "Paciente HbA1c Tamizaje EBAIS"
 Description: "Paciente ejemplo para escenario de tamizaje metabólico en EBAIS dentro del primer nivel de atención en Costa Rica."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Paciente en escenario de tamizaje metabólico en EBAIS.</p></div>"
 * identifier
   * type = CRIdentifierTypeCodes#cedula-nacional "Cédula Nacional"
   * system = "https://hl7.meddyg.com/fhir/laboratory-results/CodeSystem/cr-identifier-type"
@@ -40,6 +46,9 @@ Title: "Paciente HbA1c Seguimiento EBAIS"
 Description: "Paciente ejemplo para seguimiento longitudinal de control glucémico desde un EBAIS de la CCSS."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Paciente en seguimiento longitudinal de control glucémico en EBAIS.</p></div>"
 * identifier
   * type = CRIdentifierTypeCodes#cedula-nacional "Cédula Nacional"
   * system = "https://hl7.meddyg.com/fhir/laboratory-results/CodeSystem/cr-identifier-type"
@@ -61,6 +70,9 @@ Title: "Paciente HbA1c Control Hospitalario"
 Description: "Paciente ejemplo para escenario hospitalario de seguimiento de diabetes con resultado HbA1c alterado."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Paciente en control hospitalario por diabetes con HbA1c alterada.</p></div>"
 * identifier
   * type = CRIdentifierTypeCodes#cedula-nacional "Cédula Nacional"
   * system = "https://hl7.meddyg.com/fhir/laboratory-results/CodeSystem/cr-identifier-type"
@@ -82,6 +94,9 @@ Title: "Muestra HbA1c Tamizaje EBAIS"
 Description: "Muestra de sangre venosa para escenario de tamizaje HbA1c en EBAIS."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Muestra de sangre venosa para tamizaje de HbA1c en EBAIS.</p></div>"
 * status = #available
 * type = $snomed#122555007 "Venous blood specimen"
 * subject = Reference(PatientHbA1cTamizajeEBAISExample)
@@ -94,6 +109,9 @@ Title: "Muestra HbA1c Seguimiento EBAIS"
 Description: "Muestra de sangre venosa para control periódico de paciente crónico en EBAIS."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Muestra de sangre venosa para seguimiento de HbA1c en EBAIS.</p></div>"
 * status = #available
 * type = $snomed#122555007 "Venous blood specimen"
 * subject = Reference(PatientHbA1cSeguimientoEBAISExample)
@@ -106,6 +124,9 @@ Title: "Muestra HbA1c Control Hospitalario"
 Description: "Muestra de sangre venosa procesada en un laboratorio hospitalario para seguimiento de diabetes."
 Usage: #example
 
+* language = #es
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Muestra de sangre venosa procesada en laboratorio hospitalario para HbA1c.</p></div>"
 * status = #available
 * type = $snomed#122555007 "Venous blood specimen"
 * subject = Reference(PatientHbA1cHospitalControlExample)
