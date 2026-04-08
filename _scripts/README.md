@@ -1,149 +1,60 @@
-### Uso
-
-```bash
-# 1. Asegurate que tus ejemplos FSH incluyan narrativas XHTML:
-Instance: MyExample
-InstanceOf: MyProfile
-* status = #final
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Mi narrativa...</div>"
-
-# 2. Generar recursos con SUSHI
-sushi build
-
-# 3. Ejecutar el post-procesamiento
-python3 _scripts/add-lang-to-xhtml.py
-
-# O usa el wrapper (combina pasos 2-3):
-bash _scripts/build-ig.sh
-```
-
-### ¿Qué hace?
-
-Modifica archivos JSON en `fsh-generated/resources/`:
-
-**Antes:**
-```json
-{
-  "language": "es",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">...</div>"
-  }
-}
-```
-
-**Después:**
-```json
-{
-  "language": "es",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\" xml:lang=\"es\">...</div>"
-  }
-}
-```
-
-### Filtros Automáticos
-
-- ✓ Procesa: Recursos con narrativas XHTML (`text.div` con `xmlns`)
-- ✓ Agrega: `lang` y `xml:lang` si falta
-- ✗ Ignora: Recursos sin narrativas (perfiles, ValueSets, CodeSystems, etc.)
-- 🔄 Maneja: Bundles com entries anidadas
-
-### Requisitos
-
-- Python 3.6+
-- Familia del SO agnóstica (Windows/Mac/Linux)
-
-### Estado Actual en la IG
-
-**Scan de `fsh-generated/resources/`:**
-- Total de recursos: 42
-- Con narrativa XHTML: 0
-- Razón: Tus ejemplos FSH actualmente no tienen `.text.div` definidos
-
-**Próximos pasos:**
-1. Agrega narrativas a tus ejemplos FSH (ver template arriba)
-2. Ejecuta `bash _scripts/build-ig.sh` 
-3. El script procesará automáticamente las nuevas narrativas
-
----
-
-## build-ig.sh
-
-Script wrapper que ejecuta `sushi build` + `python3 _scripts/add-lang-to-xhtml.py` en secuencia.
-
-**Uso:**
-```bash
-bash _scripts/build-ig.sh              # Full workflow
-bash _scripts/build-ig.sh --skip-xhtml # Only sushi, skip Python
-```
 # Scripts de Post-Procesamiento para la IG
 
 ## add-lang-to-xhtml.py
 
-**Propósito:** Agregar atributos `lang` y `xml:lang` a todos los elementos `<div>` de narrativa XHTML en los recursos FHIR generados.
+Agrega `lang` y `xml:lang` a las narrativas XHTML de los recursos FHIR generados.
 
-### Why?
+### Cuándo usarlo
 
-HAPI FHIR y otros servidores FHIR requieren que la narrativa XHTML tenga el atributo `lang` que coincida con el `language` del recurso. Sin esto, recibirás advertencias:
+1. Después de `sushi build`
+2. Después de `_genonce.sh`
+3. Cuando necesites corregir narrativas en salidas ya generadas
 
-```
-Language_XHTML_Lang_Missing: Resource has a language, but the XHTML does not have an lang or an xml:lang tag
-```
+### Directorios que procesa por defecto
 
-### Uso
+1. `output/`
+2. `output/es/`
+3. `fsh-generated/resources/`
+
+También puedes pasar directorios manualmente:
 
 ```bash
-# 1. Generar recursos con SUSHI
-sushi build
+python3 _scripts/add-lang-to-xhtml.py output output/es
+```
 
-# 2. Ejecutar el post-procesamiento
-python3 _scripts/add-lang-to-xhtml.py
+### Ejemplos de uso
 
-# O usar el wrapper:
+```bash
+# SUSHI + post-proceso
 bash _scripts/build-ig.sh
+
+# IG Publisher + post-proceso
+bash _scripts/post-genonce.sh
+
+# Solo post-proceso
+python3 _scripts/add-lang-to-xhtml.py
 ```
 
-### Qué hace
+## build-ig.sh
 
-Modifica archivos JSON en `fsh-generated/resources/`:
+Ejecuta `sushi build` y luego corre `add-lang-to-xhtml.py`.
 
-**Antes:**
-```json
-{
-  "language": "es",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">...</div>"
-  }
-}
+```bash
+bash _scripts/build-ig.sh
+bash _scripts/build-ig.sh --skip-xhtml
 ```
 
-**Después:**
-```json
-{
-  "language": "es",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\" xml:lang=\"es\">...</div>"
-  }
-}
+## post-genonce.sh
+
+Ejecuta `_genonce.sh` y luego corre `add-lang-to-xhtml.py` sobre `output/` y `output/es/`.
+
+```bash
+bash _scripts/post-genonce.sh
+bash _scripts/post-genonce.sh -watch
 ```
 
-### Filtros Automáticos
+## Requisitos
 
-- ✓ Procesa: Examples, Bundles, Compositions, DiagnosticReports, Observations, etc.
-- ✗ Ignora: Perfiles (`StructureDefinition-`), ValueSets, CodeSystems, ImplementationGuides
-
-### Requisitos
-
-- Python 3.6+
-- Familia del SO agnostica (Windows/Mac/Linux)
-
----
-
-## build-ig.sh (próximo)
-
-Script wrapper que ejecuta `sushi build` + `python3 _scripts/add-lang-to-xhtml.py` en secuencia.
+1. Python 3
+2. Java disponible para `_genonce.sh`
+3. Narrativas definidas en FSH si quieres que el script tenga algo que ajustar

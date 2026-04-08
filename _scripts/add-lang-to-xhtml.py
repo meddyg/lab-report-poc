@@ -60,20 +60,20 @@ def add_lang_to_resource(resource, lang):
     return False
 
 
-def process_fhir_resources(fsh_generated_dir="fsh-generated/resources"):
+def process_fhir_resources(directory_path):
     """
     Procesa todos los archivos JSON en el directorio de recursos generados.
     
     Args:
-        fsh_generated_dir: Path al directorio de recursos FSH generados
+        directory_path: Path al directorio con recursos FHIR JSON
     
     Returns:
         tuple: (total procesados, total actualizados)
     """
-    res_path = Path(fsh_generated_dir)
+    res_path = Path(directory_path)
     
     if not res_path.exists():
-        print(f"❌ Error: Directorio no encontrado: {res_path.absolute()}")
+        print(f"⚠ Directorio no encontrado, se omite: {res_path}")
         return 0, 0
     
     files = sorted(res_path.glob("*.json"))
@@ -99,6 +99,10 @@ def process_fhir_resources(fsh_generated_dir="fsh-generated/resources"):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 data = json.load(f)
+
+            # Algunos JSON de salida de IG Publisher no son recursos FHIR (ej. listas).
+            if not isinstance(data, dict):
+                continue
             
             file_modified = False
             
@@ -133,23 +137,43 @@ def process_fhir_resources(fsh_generated_dir="fsh-generated/resources"):
     return total_count, updated_count
 
 
+def resolve_target_directories(cwd, cli_args):
+    """Determina directorios a procesar.
+
+    Prioridad:
+    1) Argumentos CLI
+    2) Defaults orientados a _genonce.sh: output y output/es
+    3) Compatibilidad: fsh-generated/resources
+    """
+    if cli_args:
+        return [Path(arg) if Path(arg).is_absolute() else cwd / arg for arg in cli_args]
+
+    return [
+        cwd / "output",
+        cwd / "output" / "es",
+        cwd / "fsh-generated" / "resources",
+    ]
+
+
 def main():
     """Punto de entrada principal."""
     print("\n" + "="*70)
     print("SCRIPT: Agregar lang attributes a XHTML narrativos")
     print("="*70 + "\n")
     
-    # Detectar directorio PWD
     cwd = Path.cwd()
-    fsh_gen_dir = cwd / "fsh-generated" / "resources"
-    
-    if not fsh_gen_dir.exists():
-        print(f"❌ Error: No se encontró {fsh_gen_dir.relative_to(cwd)}")
-        print("   Asegúrate de ejecutar: sushi build")
-        print("   Y luego: python3 _scripts/add-lang-to-xhtml.py")
-        return 1
-    
-    total, updated = process_fhir_resources(str(fsh_gen_dir))
+    targets = resolve_target_directories(cwd, sys.argv[1:])
+
+    print("Directorios objetivo:")
+    for target in targets:
+        print(f"  - {target}")
+
+    total = 0
+    updated = 0
+    for target in targets:
+        dir_total, dir_updated = process_fhir_resources(str(target))
+        total += dir_total
+        updated += dir_updated
     
     print("\n" + "="*70)
     print("RESUMEN")
