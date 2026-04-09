@@ -14,7 +14,6 @@ description: >-
   de resultados de laboratorio clínico en Costa Rica, con un enfoque específico en la integración
   con las soluciones de Meddyg y Siftia.
 status: draft # draft | active | retired | unknown
-language: es
 version: 0.1.0
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
