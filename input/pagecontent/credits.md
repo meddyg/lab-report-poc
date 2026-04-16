@@ -13,3 +13,6 @@
 ### Declaración de Propiedad Intelectual
 
 {% include ip-statements.xhtml %}
+
+### Expansión de Parámetros
+{% include expansion-params.xhtml %}

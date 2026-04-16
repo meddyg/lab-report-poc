@@ -9,7 +9,7 @@ Title: "Composition HbA1c"
 Description: "Perfil de composición clínica para estructurar el documento de resultado de laboratorio HbA1c en el PoC de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-composition-hba1c-laboratory-result"
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

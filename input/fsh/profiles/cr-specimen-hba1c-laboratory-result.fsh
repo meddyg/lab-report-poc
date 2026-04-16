@@ -9,7 +9,7 @@ Title: "Specimen HbA1c - Resultados de Laboratorio"
 Description: "Perfil de muestra biológica para pruebas de HbA1c en el PoC de resultados de laboratorio."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-specimen-hba1c-laboratory-result"
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -21,7 +21,7 @@ Description: "Perfil de muestra biológica para pruebas de HbA1c en el PoC de re
 * status ^definition = "Estado operativo de la muestra biológica utilizada para la prueba HbA1c. En este PoC se fija como disponible para indicar que la muestra fue obtenida y está disponible para el procesamiento o documentación del resultado."
 
 * type 1..1 MS
-* type = $snomed#122555007 "Venous blood specimen"
+* type = $snomed#122555007
 * type ^short = "Tipo de muestra biológica"
 * type ^definition = "Describe la naturaleza de la muestra analizada. Para el PoC de HbA1c se utiliza sangre venosa, que es la muestra base para representar el origen del resultado reportado."
 

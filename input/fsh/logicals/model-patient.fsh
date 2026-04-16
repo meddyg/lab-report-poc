@@ -9,7 +9,7 @@ Title: "Datos del Paciente"
 Description: "Modelo lógico que define los datos del paciente necesarios para representar resultados de laboratorio, basado en el perfil de paciente del CORE de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/LogicalModelPatientLaboratoryResult"
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

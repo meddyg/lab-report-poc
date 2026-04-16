@@ -10,7 +10,7 @@ Title: "DiagnosticReport HbA1c"
 Description: "Perfil de reporte diagnóstico para representar resultados de laboratorio de Hemoglobina Glicosilada (HbA1c) en el PoC de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-diagnostic-report-hba1c-laboratory-result"
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -22,7 +22,7 @@ Description: "Perfil de reporte diagnóstico para representar resultados de labo
 * status ^definition = "Estado del DiagnosticReport. En este perfil se fija como final para indicar que el reporte HbA1c ya fue emitido formalmente por el laboratorio o sistema emisor."
 
 * category 1..1 MS
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
 * category ^short = "Categoría del reporte"
 * category ^definition = "Clasificación general del reporte como reporte de laboratorio, permitiendo a los sistemas consumidores reconocer el tipo documental y aplicar procesamiento específico."
 

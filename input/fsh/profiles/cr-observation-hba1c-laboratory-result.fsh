@@ -10,7 +10,7 @@ Title: "Observation HbA1c"
 Description: "Perfil de observación para representar el resultado de Hemoglobina Glicosilada (HbA1c) en el PoC de resultados de laboratorio en Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-observation-hba1c-laboratory-result"
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -22,7 +22,7 @@ Description: "Perfil de observación para representar el resultado de Hemoglobin
 * status ^definition = "Estado clínico y operativo de la observación. En este perfil se fija como final para indicar que el resultado HbA1c ya fue completado y está listo para ser compartido, interpretado o persistido."
 
 * category 1..1 MS
-* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * category ^short = "Categoría de laboratorio"
 * category ^definition = "Clasificación general de la observación como resultado de laboratorio. Permite a sistemas consumidores identificar rápidamente que el recurso corresponde a un examen clínico de laboratorio."
 

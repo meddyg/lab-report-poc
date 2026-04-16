@@ -14,7 +14,7 @@ Usage: #example
 * active = true
 * practitioner = Reference(PractitionerLaboratoryResultExample)
 * organization = Reference(OrganizationEBAISGoicoechea2LabExample)
-* code[0] = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
+* code[0] = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor
 
 Instance: PatientHbA1cTamizajeEBAISExample
 InstanceOf: CRPatientLaboratoryResult
@@ -98,7 +98,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Muestra de sangre venosa para tamizaje de HbA1c en EBAIS.</p></div>"
 * status = #available
-* type = $snomed#122555007 "Venous blood specimen"
+* type = $snomed#122555007
 * subject = Reference(PatientHbA1cTamizajeEBAISExample)
 * collection.collectedDateTime = "2026-04-08T07:10:00-06:00"
 * receivedTime = "2026-04-08T07:35:00-06:00"
@@ -113,7 +113,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Muestra de sangre venosa para seguimiento de HbA1c en EBAIS.</p></div>"
 * status = #available
-* type = $snomed#122555007 "Venous blood specimen"
+* type = $snomed#122555007
 * subject = Reference(PatientHbA1cSeguimientoEBAISExample)
 * collection.collectedDateTime = "2026-04-08T08:20:00-06:00"
 * receivedTime = "2026-04-08T08:50:00-06:00"
@@ -128,7 +128,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Muestra de sangre venosa procesada en laboratorio hospitalario para HbA1c.</p></div>"
 * status = #available
-* type = $snomed#122555007 "Venous blood specimen"
+* type = $snomed#122555007
 * subject = Reference(PatientHbA1cHospitalControlExample)
 * collection.collectedDateTime = "2026-04-08T09:05:00-06:00"
 * receivedTime = "2026-04-08T09:30:00-06:00"

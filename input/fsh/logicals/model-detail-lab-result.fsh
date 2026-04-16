@@ -9,7 +9,7 @@ Title: "Detalle del Resultado de Laboratorio"
 Description: "Modelo lógico que define los datos del detalle del resultado de laboratorio necesarios para representar resultados de laboratorio, basado en la documentación para este caso de uso." 
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/LogicalModelDetailResultLaboratoryResult"
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

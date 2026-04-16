@@ -13,7 +13,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Muestra de sangre venosa para análisis de HbA1c.</p></div>"
 * status = #available
-* type = $snomed#122555007 "Venous blood specimen"
+* type = $snomed#122555007
 * subject = Reference(PatientLaboratoryResultExample)
 * collection.collectedDateTime = "2026-04-07T08:15:00-06:00"
 * receivedTime = "2026-04-07T08:45:00-06:00"
@@ -30,7 +30,7 @@ Usage: #example
 * active = true
 * practitioner = Reference(PractitionerLaboratoryResultExample)
 * organization = Reference(OrganizationHospitalMexicoLabExample)
-* code[0] = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
+* code[0] = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor
 
 Instance: ObservationHbA1cLaboratoryResultExample
 InstanceOf: CRObservationHbA1cLaboratoryResult
@@ -42,7 +42,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Resultado de HbA1c en sangre venosa: 7.1%.</p></div>"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = $loinc#4548-4
 * subject = Reference(PatientLaboratoryResultExample)
 * effectiveDateTime = "2026-04-07T09:00:00-06:00"
@@ -52,7 +52,7 @@ Usage: #example
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #%
 * valueQuantity.unit = "%"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H
 * method = $snomed#726449005
 * specimen = Reference(SpecimenHbA1cLaboratoryResultExample)
 * referenceRange.text = "Rango de referencia para adulto: 4.0% - 5.6%"
@@ -67,7 +67,6 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Reporte de laboratorio de HbA1c con resultado superior al rango esperado.</p></div>"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * code = $loinc#4548-4
 * subject = Reference(PatientLaboratoryResultExample)
 * effectiveDateTime = "2026-04-07T09:00:00-06:00"

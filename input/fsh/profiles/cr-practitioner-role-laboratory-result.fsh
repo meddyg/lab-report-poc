@@ -9,7 +9,7 @@ Title: "PractitionerRole - Resultados de Laboratorio"
 Description: "Perfil de PractitionerRole para representar el contexto organizacional y funcional del profesional de salud dentro del flujo de intercambio de resultados de laboratorio."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-practitioner-role-laboratory-result"
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

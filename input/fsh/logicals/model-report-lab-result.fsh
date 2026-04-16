@@ -9,7 +9,7 @@ Title: "Reporte de Resultado de Laboratorio"
 Description: "Modelo lógico que define los datos necesarios para representar un reporte de resultado de laboratorio, basado en la documentación para este caso de uso."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/LogicalModelReportLaboratoryResult"
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
