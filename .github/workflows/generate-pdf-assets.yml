@@ -9,6 +9,8 @@ on:
       - "input/fsh/**"
       - "scripts/generate_ccss_lab_pdfs.py"
       - "input/pagecontent/revision-semantica.md"
+      - "sushi-config.yaml"
+      - "expansion-params.json"
       - ".github/workflows/generate-pdf-assets.yml"
 
 permissions:
