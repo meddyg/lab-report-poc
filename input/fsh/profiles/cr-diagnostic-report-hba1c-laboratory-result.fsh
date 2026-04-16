@@ -22,12 +22,11 @@ Description: "Perfil de reporte diagnóstico para representar resultados de labo
 * status ^definition = "Estado del DiagnosticReport. En este perfil se fija como final para indicar que el reporte HbA1c ya fue emitido formalmente por el laboratorio o sistema emisor."
 
 * category 1..1 MS
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * category ^short = "Categoría del reporte"
 * category ^definition = "Clasificación general del reporte como reporte de laboratorio, permitiendo a los sistemas consumidores reconocer el tipo documental y aplicar procesamiento específico."
 
 * code 1..1 MS
-* code from https://hl7.meddyg.com/fhir/laboratory-results/ValueSet/cr-hba1c-test-code (required)
 * code = $loinc#4548-4
 * code ^short = "Código principal del reporte"
 * code ^definition = "Código clínico que identifica que el reporte se refiere al resultado HbA1c del PoC. Sirve como resumen semántico del contenido principal del DiagnosticReport."

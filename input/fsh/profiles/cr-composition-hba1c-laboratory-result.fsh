@@ -21,7 +21,6 @@ Description: "Perfil de composición clínica para estructurar el documento de r
 * status ^definition = "Estado de la Composition que representa el documento clínico. Se fija como final para indicar que el documento de resultado HbA1c está completo y listo para intercambio."
 
 * type 1..1 MS
-* type from https://hl7.meddyg.com/fhir/laboratory-results/ValueSet/cr-hba1c-composition-type (required)
 * type = $loinc#11502-2
 * type ^short = "Tipo de documento clínico"
 * type ^definition = "Código LOINC que identifica el documento como un reporte de laboratorio. Es la clasificación documental principal del Bundle document."

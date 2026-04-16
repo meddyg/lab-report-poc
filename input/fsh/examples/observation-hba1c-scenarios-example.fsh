@@ -12,7 +12,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Resultado de HbA1c para tamizaje en EBAIS: 5.4%.</p></div>"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#4548-4
 * subject = Reference(PatientHbA1cTamizajeEBAISExample)
 * effectiveDateTime = "2026-04-08T08:00:00-06:00"
@@ -22,7 +22,7 @@ Usage: #example
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #%
 * valueQuantity.unit = "%"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 * method = $snomed#726449005
 * specimen = Reference(SpecimenHbA1cTamizajeEBAISExample)
 * referenceRange.low.value = 4.0
@@ -46,7 +46,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Resultado de HbA1c en seguimiento ambulatorio en EBAIS: 6.3%.</p></div>"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#4548-4
 * subject = Reference(PatientHbA1cSeguimientoEBAISExample)
 * effectiveDateTime = "2026-04-08T09:10:00-06:00"
@@ -56,7 +56,7 @@ Usage: #example
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #%
 * valueQuantity.unit = "%"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
 * method = $snomed#726449005
 * specimen = Reference(SpecimenHbA1cSeguimientoEBAISExample)
 * referenceRange.low.value = 4.0
@@ -80,7 +80,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Resultado de HbA1c en control hospitalario: 9.2%.</p></div>"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#4548-4
 * subject = Reference(PatientHbA1cHospitalControlExample)
 * effectiveDateTime = "2026-04-08T10:00:00-06:00"
@@ -90,7 +90,7 @@ Usage: #example
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #%
 * valueQuantity.unit = "%"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
 * method = $snomed#726449005
 * specimen = Reference(SpecimenHbA1cHospitalControlExample)
 * referenceRange.low.value = 4.0

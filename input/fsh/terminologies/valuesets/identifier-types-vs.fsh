@@ -6,5 +6,4 @@ Description: "Listado de tipos de identificadores para personas físicas y jurí
 * insert ValueSetMeta
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/ValueSet/cr-identifier-types"
 
-* $cr-id-type#cedula-nacional "Cédula Nacional"
-* $cr-id-type#cedula-juridica "Cédula Jurídica"
+* include codes from system CRIdentifierTypeCodes

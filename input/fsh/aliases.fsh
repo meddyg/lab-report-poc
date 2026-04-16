@@ -9,6 +9,3 @@ Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
 
 // Terminología FHIR core
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-
-// Terminología específica para Costa Rica
-Alias: $cr-id-type = https://hl7.meddyg.com/fhir/laboratory-results/CodeSystem/cr-identifier-type
