@@ -13,7 +13,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Profesional de salud responsable de la validación y reporte de laboratorio.</p></div>"
 * identifier
-  * type = CRIdentifierTypeCodes#cedula-nacional "Cédula Nacional"
+  * type = $cr-id-type#cedula-nacional "Cédula Nacional"
   * system = "https://hl7.meddyg.com/fhir/laboratory-results/CodeSystem/cr-identifier-type"
   * value = "1234567890"
 

@@ -1,6 +1,6 @@
 RuleSet:            ValueSetMeta
 
-* ^version = "0.0.1"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
 * ^date = "2026-04-06"

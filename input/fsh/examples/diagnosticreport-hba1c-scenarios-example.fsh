@@ -12,7 +12,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Reporte de HbA1c para tamizaje en EBAIS con resultado dentro de rango.</p></div>"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
 * code = $loinc#4548-4
 * subject = Reference(PatientHbA1cTamizajeEBAISExample)
 * effectiveDateTime = "2026-04-08T08:00:00-06:00"
@@ -34,7 +34,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Reporte de HbA1c para seguimiento en EBAIS con resultado elevado.</p></div>"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
 * code = $loinc#4548-4
 * subject = Reference(PatientHbA1cSeguimientoEBAISExample)
 * effectiveDateTime = "2026-04-08T09:10:00-06:00"
@@ -56,7 +56,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Reporte de HbA1c en contexto hospitalario con control glucémico no adecuado.</p></div>"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
 * code = $loinc#4548-4
 * subject = Reference(PatientHbA1cHospitalControlExample)
 * effectiveDateTime = "2026-04-08T10:00:00-06:00"

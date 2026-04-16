@@ -13,3 +13,6 @@
 ### Declaración de Propiedad Intelectual
 
 {% include ip-statements.xhtml %}
+
+
+{% include expansion-params.xhtml %}

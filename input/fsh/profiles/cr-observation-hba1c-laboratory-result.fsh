@@ -22,11 +22,12 @@ Description: "Perfil de observación para representar el resultado de Hemoglobin
 * status ^definition = "Estado clínico y operativo de la observación. En este perfil se fija como final para indicar que el resultado HbA1c ya fue completado y está listo para ser compartido, interpretado o persistido."
 
 * category 1..1 MS
-* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * category ^short = "Categoría de laboratorio"
 * category ^definition = "Clasificación general de la observación como resultado de laboratorio. Permite a sistemas consumidores identificar rápidamente que el recurso corresponde a un examen clínico de laboratorio."
 
 * code 1..1 MS
+* code from https://hl7.meddyg.com/fhir/laboratory-results/ValueSet/cr-hba1c-test-code (required)
 * code = $loinc#4548-4
 * code ^short = "Código de la prueba HbA1c"
 * code ^definition = "Código LOINC que identifica de manera unívoca la prueba de hemoglobina glicosilada (HbA1c) reportada en este PoC. Es el elemento principal para semántica clínica e interoperabilidad internacional."
