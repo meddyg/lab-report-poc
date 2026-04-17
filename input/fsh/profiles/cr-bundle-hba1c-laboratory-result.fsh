@@ -44,7 +44,7 @@ Title: "Bundle HbA1c"
 Description: "Perfil de Bundle tipo document para intercambio de resultado de laboratorio HbA1c centrado en Composition y DiagnosticReport en el PoC de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-bundle-hba1c-laboratory-result"
-* ^version = "0.1.1"
+* ^version = "0.1.2"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

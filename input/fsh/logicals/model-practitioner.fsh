@@ -9,7 +9,7 @@ Title: "Datos del Profesional de Salud"
 Description: "Modelo lógico que define los datos del profesional de salud necesarios para representar resultados de laboratorio, basado en el perfil de practitioner del CORE de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/LogicalModelPractitionerLaboratoryResult"
-* ^version = "0.1.1"
+* ^version = "0.1.2"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

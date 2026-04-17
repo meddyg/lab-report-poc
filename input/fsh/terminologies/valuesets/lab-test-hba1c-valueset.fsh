@@ -8,7 +8,7 @@ Title: "Códigos de Pruebas de Hemoglobina"
 Description: "Conjunto de valores que define los códigos LOINC válidos para pruebas de hemoglobina, incluyendo hemoglobina total y hemoglobina glicosilada (HbA1c)."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/ValueSet/lab-test-hemoglobina-codes"
-* ^version = "0.1.1"
+* ^version = "0.1.2"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

@@ -9,7 +9,7 @@ Title: "Segundo Apellido"
 Description: "Extensión para capturar el segundo apellido de manera explícita, mapeando a segundoApellido de los modelos lógicos Laboratory Results."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/ext-second-surname"
-* ^version = "0.1.1"
+* ^version = "0.1.2"
 * ^status = #draft
 * ^experimental = true
 * ^context[0].type = #element

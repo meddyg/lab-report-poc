@@ -8,7 +8,7 @@ Title: "Códigos de Métodos de Pruebas de Laboratorio"
 Description: "Conjunto de valores que define los códigos SNOMED CT válidos para métodos utilizados en pruebas de laboratorio clínico."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/ValueSet/lab-test-method-codes"
-* ^version = "0.1.1"
+* ^version = "0.1.2"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

@@ -10,7 +10,7 @@ Title: "Practitioner - Resultados de Laboratorio"
 Description: "Perfil de profesional de salud que define los datos del profesional necesarios para representar resultados de laboratorio, basado en el modelo lógico LogicalModelPractitionerLaboratoryResult y el perfil de practitioner del CORE de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-practitioner-laboratory-result"
-* ^version = "0.1.1"
+* ^version = "0.1.2"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

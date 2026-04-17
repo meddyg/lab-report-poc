@@ -4,6 +4,10 @@
     {
       "name": "system-version",
       "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+    },
+    {
+      "name": "system-version",
+      "valueUri": "http://loinc.org|2.82"
     }
   ]
 }
