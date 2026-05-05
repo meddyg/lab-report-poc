@@ -2,6 +2,16 @@
 // Profile: Specimen HbA1c para Resultados de Laboratorio
 // ==============================================================================================================
 
+Invariant: cr-specimen-collected-no-future
+Description: "La fecha y hora de recolección de la muestra no puede ser futura."
+Severity: #error
+Expression: "$this <= now()"
+
+Invariant: cr-specimen-received-no-future
+Description: "La fecha y hora de recepción de la muestra no puede ser futura."
+Severity: #error
+Expression: "$this <= now()"
+
 Profile: CRSpecimenHbA1cLaboratoryResult
 Parent: Specimen
 Id: cr-specimen-hba1c-laboratory-result
@@ -9,7 +19,7 @@ Title: "Specimen HbA1c - Resultados de Laboratorio"
 Description: "Perfil de muestra biológica para pruebas de HbA1c en el PoC de resultados de laboratorio."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-specimen-hba1c-laboratory-result"
-* ^version = "0.1.2"
+* ^version = "0.1.3"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -37,10 +47,12 @@ Description: "Perfil de muestra biológica para pruebas de HbA1c en el PoC de re
 * collection.collected[x] only dateTime
 * collection.collected[x] ^short = "Fecha y hora de recolección"
 * collection.collected[x] ^definition = "Fecha y hora en que se tomó la muestra del paciente. Permite documentar el origen temporal del espécimen y correlacionarlo con el resultado emitido."
+* collection.collectedDateTime obeys cr-specimen-collected-no-future
 
 * receivedTime 0..1 MS
 * receivedTime ^short = "Fecha y hora de recepción"
 * receivedTime ^definition = "Fecha y hora en que la muestra fue recibida por el laboratorio o por el sistema que registra el procesamiento del análisis HbA1c."
+* receivedTime obeys cr-specimen-received-no-future
 
 * processing 0..* MS
 * processing ^short = "Procesamiento de la muestra"

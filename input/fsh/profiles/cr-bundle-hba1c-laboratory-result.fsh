@@ -32,6 +32,11 @@ Description: "La Composition debe enlazar al menos un DiagnosticReport del docum
 Severity: #error
 Expression: "entry.resource.ofType(Composition).section.entry.resolve().ofType(DiagnosticReport).exists()"
 
+Invariant: cr-bundle-timestamp-no-future
+Description: "La fecha de ensamblaje del Bundle no puede ser futura."
+Severity: #error
+Expression: "$this <= now()"
+
 Invariant: CRBundleCompFirst1
 Description: "La primera entrada del documento debe ser Composition."
 Severity: #error
@@ -44,7 +49,7 @@ Title: "Bundle HbA1c"
 Description: "Perfil de Bundle tipo document para intercambio de resultado de laboratorio HbA1c centrado en Composition y DiagnosticReport en el PoC de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-bundle-hba1c-laboratory-result"
-* ^version = "0.1.2"
+* ^version = "0.1.3"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -69,6 +74,7 @@ Description: "Perfil de Bundle tipo document para intercambio de resultado de la
 * timestamp 1..1 MS
 * timestamp ^short = "Fecha de ensamblaje del bundle"
 * timestamp ^definition = "Fecha y hora en que el documento clínico fue ensamblado como Bundle para ser compartido o publicado."
+* timestamp obeys cr-bundle-timestamp-no-future
 
 * total 0..0
 * total ^short = "Sin total"

@@ -2,6 +2,11 @@
 // Profile: Composition HbA1c para Resultados de Laboratorio
 // ==============================================================================================================
 
+Invariant: cr-composition-date-no-future
+Description: "La fecha de creación del documento no puede ser futura."
+Severity: #error
+Expression: "$this <= now()"
+
 Profile: CRCompositionHbA1cLaboratoryResult
 Parent: Composition
 Id: cr-composition-hba1c-laboratory-result
@@ -9,7 +14,7 @@ Title: "Composition HbA1c"
 Description: "Perfil de composición clínica para estructurar el documento de resultado de laboratorio HbA1c en el PoC de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-composition-hba1c-laboratory-result"
-* ^version = "0.1.2"
+* ^version = "0.1.3"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -34,6 +39,8 @@ Description: "Perfil de composición clínica para estructurar el documento de r
 * date 1..1 MS
 * date ^short = "Fecha del documento"
 * date ^definition = "Fecha y hora de creación o ensamblaje del documento clínico de laboratorio que agrupa Composition, DiagnosticReport y recursos relacionados."
+* date obeys cr-composition-date-no-future
+
 * author 1..* MS
 * author only Reference(CROrganizationLaboratoryResult or CRPractitionerLaboratoryResult or CRPractitionerRoleLaboratoryResult)
 * author ^short = "Autores del documento"

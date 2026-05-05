@@ -3,6 +3,11 @@
 // Basado en: LogicalModelDetailResultLaboratoryResult
 // ==============================================================================================================
 
+Invariant: cr-observation-effective-no-future
+Description: "La fecha y hora clínica del resultado no puede ser futura."
+Severity: #error
+Expression: "$this <= now()"
+
 Profile: CRObservationHbA1cLaboratoryResult
 Parent: Observation
 Id: cr-observation-hba1c-laboratory-result
@@ -10,7 +15,7 @@ Title: "Observation HbA1c"
 Description: "Perfil de observación para representar el resultado de Hemoglobina Glicosilada (HbA1c) en el PoC de resultados de laboratorio en Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-observation-hba1c-laboratory-result"
-* ^version = "0.1.2"
+* ^version = "0.1.3"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -40,6 +45,7 @@ Description: "Perfil de observación para representar el resultado de Hemoglobin
 * effective[x] only dateTime
 * effective[x] ^short = "Momento clínico del resultado"
 * effective[x] ^definition = "Fecha y hora clínica a la que corresponde el resultado de HbA1c, normalmente relacionada con la toma o el procesamiento de la muestra."
+* effectiveDateTime obeys cr-observation-effective-no-future
 
 * performer 1..* MS
 * performer only Reference(CROrganizationLaboratoryResult or CRPractitionerLaboratoryResult or CRPractitionerRoleLaboratoryResult)

@@ -3,6 +3,16 @@
 // Basado en: LogicalModelReportLaboratoryResult
 // ==============================================================================================================
 
+Invariant: cr-dr-effective-no-future
+Description: "La fecha y hora clínica del estudio no puede ser futura."
+Severity: #error
+Expression: "$this <= now()"
+
+Invariant: cr-dr-issued-no-future
+Description: "La fecha y hora de emisión del reporte no puede ser futura."
+Severity: #error
+Expression: "$this <= now()"
+
 Profile: CRDiagnosticReportHbA1cLaboratoryResult
 Parent: DiagnosticReport
 Id: cr-diagnostic-report-hba1c-laboratory-result
@@ -10,7 +20,7 @@ Title: "DiagnosticReport HbA1c"
 Description: "Perfil de reporte diagnóstico para representar resultados de laboratorio de Hemoglobina Glicosilada (HbA1c) en el PoC de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-diagnostic-report-hba1c-laboratory-result"
-* ^version = "0.1.2"
+* ^version = "0.1.3"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -40,10 +50,12 @@ Description: "Perfil de reporte diagnóstico para representar resultados de labo
 * effective[x] only dateTime
 * effective[x] ^short = "Momento clínico del estudio"
 * effective[x] ^definition = "Fecha y hora clínica a la que corresponde el estudio o resultado HbA1c contenido en el reporte."
+* effectiveDateTime obeys cr-dr-effective-no-future
 
 * issued 1..1 MS
 * issued ^short = "Fecha y hora de emisión"
 * issued ^definition = "Fecha y hora en que el DiagnosticReport fue oficialmente emitido, publicado o puesto a disposición para intercambio entre sistemas."
+* issued obeys cr-dr-issued-no-future
 
 * performer 1..* MS
 * performer only Reference(CROrganizationLaboratoryResult or CRPractitionerLaboratoryResult or CRPractitionerRoleLaboratoryResult)

@@ -3,6 +3,11 @@
 // Basado en: LogicalModelPatientLaboratoryResult
 // ==============================================================================================================
 
+Invariant: cr-patient-birthdate-no-future
+Description: "La fecha de nacimiento no puede ser una fecha futura."
+Severity: #error
+Expression: "$this <= today()"
+
 Profile: CRPatientLaboratoryResult
 Parent: Patient
 Id: cr-patient-laboratory-result
@@ -10,7 +15,7 @@ Title: "Patient - Resultados de Laboratorio"
 Description: "Perfil de paciente que define los datos del paciente necesarios para representar resultados de laboratorio, basado en el modelo lógico LogicalModelPatientLaboratoryResult y el perfil de paciente del CORE de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-patient-laboratory-result"
-* ^version = "0.1.2"
+* ^version = "0.1.3"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -52,6 +57,7 @@ Description: "Perfil de paciente que define los datos del paciente necesarios pa
 * birthDate 1..1 MS
   * ^short = "Fecha de nacimiento del paciente"
   * ^definition = "La fecha de nacimiento del paciente, utilizada para calcular la edad y otros datos demográficos."
+* birthDate obeys cr-patient-birthdate-no-future
 
 // Sexo (sexo del modelo lógico)
 * gender 1..1 MS
