@@ -54,6 +54,8 @@ pages:
     title: Inicio
   revision-semantica.md:
     title: Relacion Semantica Bundle-PDF
+  seguridad-trazabilidad.md:
+    title: Seguridad y Trazabilidad
   credits.md:
     title: Créditos
   downloads.md:
@@ -98,6 +100,7 @@ menu:
   Inicio: index.html
   Artefactos: artifacts.html
   Revision Semantica: revision-semantica.html
+  Seguridad y Trazabilidad: seguridad-trazabilidad.html
   Créditos: credits.html
   Descargas: downloads.html
 

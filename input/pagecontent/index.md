@@ -10,6 +10,12 @@ Esta guía de implementación utiliza el modelo de datos definido en las guías 
 
 Esta guía de implementación soporta como PoC solo el resultado de laboratorio de Hemoglobina Glicosilada (HbA1c), pero se espera que en el futuro se amplíe para incluir otros tipos de resultados de laboratorio relevantes para la atención de salud en Costa Rica.
 
+### Seguridad y Etiquetas de Confidencialidad
+
+Los resultados de laboratorio rutinarios representados en esta guía (como Hemoglobina Glicosilada) no requieren etiquetas de seguridad adicionales en `meta.security`. El consentimiento previo del paciente, registrado mediante el recurso `Consent`, es suficiente para gestionar la autorización de acceso a este tipo de resultados.
+
+Para futuras versiones de la guía que incluyan resultados clínicamente sensibles (p. ej., VIH, toxicología, genética), se utilizará `meta.security` con códigos del sistema `http://terminology.hl7.org/CodeSystem/v3-Confidentiality`, de manera complementaria al registro de consentimiento.
+
 ### Autores
 Esta guía de implementación ha sido desarrollada por el equipo de la HealthTech Meddyg en colaboración con Siftia y ESICOM.
 
