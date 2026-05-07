@@ -19,7 +19,7 @@ Description: "Perfil de trazabilidad para documentar el origen y la cadena de cu
 
 // --- Target ---
 * target 1..* MS
-* target only Reference(DiagnosticReport)
+* target only Reference(CRDiagnosticReportHbA1cLaboratoryResult)
 * target ^short = "Reporte de laboratorio al que aplica esta provenance"
 * target ^definition = "Referencia al DiagnosticReport cuya cadena de custodia se documenta."
 
@@ -30,7 +30,7 @@ Description: "Perfil de trazabilidad para documentar el origen y la cadena de cu
 
 // --- Agente: Autor (laboratorio/LIS) ---
 * agent 1..* MS
-* agent ^slicing.discriminator.type = #pattern
+* agent ^slicing.discriminator.type = #value
 * agent ^slicing.discriminator.path = "type"
 * agent ^slicing.rules = #open
 * agent ^short = "Sistemas o personas que participaron en la cadena de custodia"
@@ -41,22 +41,32 @@ Description: "Perfil de trazabilidad para documentar el origen y la cadena de cu
     custodio 1..1 MS
 
 * agent[autor].type 1..1 MS
+* agent[autor].type.coding 1..* MS
+* agent[autor].type.coding.system 1..1 MS
+* agent[autor].type.coding.system = "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
+* agent[autor].type.coding.code 1..1 MS
+* agent[autor].type.coding.code = #author
 * agent[autor].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author
 * agent[autor].type ^short = "Rol: autor (laboratorio/LIS que generó el resultado)"
 * agent[autor].type ^definition = "El agente autor es el sistema o persona que generó el resultado de laboratorio, típicamente el laboratorio clínico o el sistema LIS que procesó la muestra y produjo el resultado."
 
 * agent[autor].who 1..1 MS
-* agent[autor].who only Reference(Organization or Practitioner or PractitionerRole)
+* agent[autor].who only Reference(CROrganizationLaboratoryResult or CRPractitionerLaboratoryResult or CRPractitionerRoleLaboratoryResult)
 * agent[autor].who ^short = "Laboratorio u organización que generó el resultado"
 * agent[autor].who ^definition = "Referencia a la organización, profesional o rol profesional que actuó como autor del resultado de laboratorio. En el contexto de este PoC, suele ser el laboratorio clínico que procesó la muestra."
 
 * agent[custodio].type 1..1 MS
+* agent[custodio].type.coding 1..* MS
+* agent[custodio].type.coding.system 1..1 MS
+* agent[custodio].type.coding.system = "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
+* agent[custodio].type.coding.code 1..1 MS
+* agent[custodio].type.coding.code = #custodian
 * agent[custodio].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#custodian
 * agent[custodio].type ^short = "Rol: custodio (repositorio FHIR que persiste el resultado)"
 * agent[custodio].type ^definition = "El agente custodio es el sistema u organización responsable de la custodia del resultado de laboratorio una vez que ha sido registrado en el repositorio FHIR. En este PoC, suele ser el repositorio FHIR que almacena el resultado para su consulta por parte de otros sistemas o profesionales."
 
 * agent[custodio].who 1..1 MS
-* agent[custodio].who only Reference(Organization)
+* agent[custodio].who only Reference(CROrganizationLaboratoryResult)
 * agent[custodio].who ^short = "Organización responsable del repositorio FHIR"
 * agent[custodio].who ^definition = "Referencia a la organización que actúa como custodio del resultado de laboratorio en el repositorio FHIR. En este PoC, se utiliza una organización ficticia 'Meddyg - Repositorio FHIR' para representar este rol."
 

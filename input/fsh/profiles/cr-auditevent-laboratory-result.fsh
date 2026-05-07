@@ -69,7 +69,7 @@ Description: "Perfil de auditoría para registrar los eventos de acceso y modifi
 * agent[solicitante].requestor = true
 * agent[solicitante].requestor ^short = "true: este agente inició la solicitud"
 * agent[solicitante].who 1..1 MS
-* agent[solicitante].who only Reference(Organization or Practitioner or PractitionerRole or Patient or Device)
+* agent[solicitante].who only Reference(CROrganizationLaboratoryResult or CRPractitionerLaboratoryResult or CRPractitionerRoleLaboratoryResult or CRPatientLaboratoryResult)
 * agent[solicitante].who ^short = "Sistema o persona que inició la acción"
 * agent[solicitante].type MS
 * agent[solicitante].type ^short = "Rol del agente solicitante (Client, Source, etc.)"
@@ -77,7 +77,7 @@ Description: "Perfil de auditoría para registrar los eventos de acceso y modifi
 * agent[receptor].requestor = false
 * agent[receptor].requestor ^short = "false: este agente recibió/procesó la solicitud"
 * agent[receptor].who 1..1 MS
-* agent[receptor].who only Reference(Organization or Device)
+* agent[receptor].who only Reference(CROrganizationLaboratoryResult)
 * agent[receptor].who ^short = "Sistema que recibió y procesó la solicitud"
 * agent[receptor].type MS
 * agent[receptor].type ^short = "Rol del agente receptor (Repository, Registry, etc.)"
@@ -85,7 +85,7 @@ Description: "Perfil de auditoría para registrar los eventos de acceso y modifi
 // --- Fuente: sistema que genera el AuditEvent ---
 * source 1..1 MS
 * source.observer 1..1 MS
-* source.observer only Reference(Organization or Device)
+* source.observer only Reference(CROrganizationLaboratoryResult)
 * source.observer ^short = "Sistema que genera y reporta este AuditEvent"
 * source.observer ^definition = "Identifica el sistema responsable de generar este registro de auditoría. Es el actor del flujo que registra el evento (p. ej. el FHIR Repository registra los accesos a sus recursos)."
 

@@ -162,8 +162,7 @@ Usage: #example
 
 * source.observer = Reference(OrganizationConsentServiceExample)
 
-* entity[0].what.identifier.system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/consent-id"
-* entity[0].what.identifier.value = "consent-hba1c-tamizaje-001"
+* entity[0].what.display = "Consent HbA1c Tamizaje - Paciente autorizado"
 * entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#4 "Domain Resource"
 
 // ==============================================================================================================
