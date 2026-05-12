@@ -19,7 +19,7 @@ Title: "Specimen HbA1c - Resultados de Laboratorio"
 Description: "Perfil de muestra biológica para pruebas de HbA1c en el PoC de resultados de laboratorio."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-specimen-hba1c-laboratory-result"
-* ^version = "0.1.3"
+* ^version = "0.1.4"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

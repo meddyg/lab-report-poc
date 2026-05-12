@@ -8,6 +8,21 @@ Description: "La fecha de nacimiento no puede ser una fecha futura."
 Severity: #error
 Expression: "$this <= today()"
 
+Invariant: cr-patient-identifier-value-max-length
+Description: "El valor del identificador no puede exceder 1000 caracteres."
+Severity: #warning
+Expression: "value.length() <= 1000"
+
+Invariant: cr-patient-name-given-max-length
+Description: "Los nombres no pueden exceder 1000 caracteres."
+Severity: #warning
+Expression: "given.join('').length() <= 1000"
+
+Invariant: cr-patient-name-family-max-length
+Description: "El apellido no puede exceder 1000 caracteres."
+Severity: #warning
+Expression: "family.length() <= 1000"
+
 Profile: CRPatientLaboratoryResult
 Parent: Patient
 Id: cr-patient-laboratory-result
@@ -15,7 +30,7 @@ Title: "Patient - Resultados de Laboratorio"
 Description: "Perfil de paciente que define los datos del paciente necesarios para representar resultados de laboratorio, basado en el modelo lógico LogicalModelPatientLaboratoryResult y el perfil de paciente del CORE de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-patient-laboratory-result"
-* ^version = "0.1.3"
+* ^version = "0.1.4"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -52,6 +67,8 @@ Description: "Perfil de paciente que define los datos del paciente necesarios pa
   * family 1..1 MS
     * ^short = "Primer apellido del paciente"
     * ^definition = "Primer apellido obligatorio del paciente, mapeado de primerApellido del modelo lógico. El segundo apellido puede representarse usando la extensión SecondSurname."
+* identifier obeys cr-patient-identifier-value-max-length
+* name obeys cr-patient-name-given-max-length and cr-patient-name-family-max-length
 
 // Fecha de nacimiento (fechaNacimiento del modelo lógico)
 * birthDate 1..1 MS

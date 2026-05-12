@@ -3,6 +3,21 @@
 // Basado en: LogicalModelPractitionerLaboratoryResult
 // ==============================================================================================================
 
+Invariant: cr-practitioner-identifier-value-max-length
+Description: "El valor del identificador no puede exceder 1000 caracteres."
+Severity: #warning
+Expression: "value.length() <= 1000"
+
+Invariant: cr-practitioner-name-given-max-length
+Description: "Los nombres no pueden exceder 1000 caracteres."
+Severity: #warning
+Expression: "given.join('').length() <= 1000"
+
+Invariant: cr-practitioner-name-family-max-length
+Description: "El apellido no puede exceder 1000 caracteres."
+Severity: #warning
+Expression: "family.length() <= 1000"
+
 Profile: CRPractitionerLaboratoryResult
 Parent: Practitioner
 Id: cr-practitioner-laboratory-result
@@ -10,7 +25,7 @@ Title: "Practitioner - Resultados de Laboratorio"
 Description: "Perfil de profesional de salud que define los datos del profesional necesarios para representar resultados de laboratorio, basado en el modelo lógico LogicalModelPractitionerLaboratoryResult y el perfil de practitioner del CORE de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-practitioner-laboratory-result"
-* ^version = "0.1.3"
+* ^version = "0.1.4"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -47,6 +62,8 @@ Description: "Perfil de profesional de salud que define los datos del profesiona
   * family 1..1 MS
     * ^short = "Primer apellido del profesional"
     * ^definition = "Primer apellido obligatorio del profesional de salud, mapeado de primerApellido del modelo lógico. El segundo apellido puede representarse usando la extensión SecondSurname."
+* identifier obeys cr-practitioner-identifier-value-max-length
+* name obeys cr-practitioner-name-given-max-length and cr-practitioner-name-family-max-length
 
 // Sexo (sexo del modelo lógico)
 * gender 1..1 MS
