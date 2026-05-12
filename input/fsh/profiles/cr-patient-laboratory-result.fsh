@@ -1,5 +1,5 @@
 // ==============================================================================================================
-// Profile: Paciente para Resultados de Laboratorio
+// Profile: Paciente para Resultados de Laboratorio R5
 // Basado en: LogicalModelPatientLaboratoryResult
 // ==============================================================================================================
 
