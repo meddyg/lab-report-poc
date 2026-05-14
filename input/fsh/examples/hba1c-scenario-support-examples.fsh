@@ -27,7 +27,7 @@ Usage: #example
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Paciente en escenario de tamizaje metabólico en EBAIS.</p></div>"
 * identifier
   * type = CRIdentifierTypeCodes#cedula-nacional "Cédula Nacional"
-  * system = "https://hl7.meddyg.com/fhir/laboratory-results/CodeSystem/cr-identifier-type"
+  * system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/cedula-nacional"
   * value = "201230456"
 
 * name
@@ -51,7 +51,7 @@ Usage: #example
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Paciente en seguimiento longitudinal de control glucémico en EBAIS.</p></div>"
 * identifier
   * type = CRIdentifierTypeCodes#cedula-nacional "Cédula Nacional"
-  * system = "https://hl7.meddyg.com/fhir/laboratory-results/CodeSystem/cr-identifier-type"
+  * system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/cedula-nacional"
   * value = "108760543"
 
 * name
@@ -75,7 +75,7 @@ Usage: #example
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Paciente en control hospitalario por diabetes con HbA1c alterada.</p></div>"
 * identifier
   * type = CRIdentifierTypeCodes#cedula-nacional "Cédula Nacional"
-  * system = "https://hl7.meddyg.com/fhir/laboratory-results/CodeSystem/cr-identifier-type"
+  * system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/cedula-nacional"
   * value = "304560789"
 
 * name

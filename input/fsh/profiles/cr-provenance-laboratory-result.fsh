@@ -11,7 +11,7 @@ Title: "Provenance Resultado de Laboratorio"
 Description: "Perfil de trazabilidad para documentar el origen y la cadena de custodia de los resultados de laboratorio (DiagnosticReport) en el PoC de Costa Rica. Cubre el flujo desde el sistema de origen (LIS o laboratorio) hasta el repositorio FHIR."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-provenance-laboratory-result"
-* ^version = "0.1.4"
+* ^version = "0.1.5"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
