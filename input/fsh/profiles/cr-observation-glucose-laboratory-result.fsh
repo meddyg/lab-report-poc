@@ -11,7 +11,7 @@ Title: "Observation Glucosa en Ayunas"
 Description: "Perfil de observación para representar el resultado de Glucosa en ayunas en el PoC de resultados de laboratorio en Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-observation-glucose-laboratory-result"
-* ^version = "0.1.5"
+* ^version = "0.1.6"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

@@ -11,7 +11,7 @@ Title: "DiagnosticReport Glucosa en Ayunas"
 Description: "Perfil de reporte diagnóstico para representar resultados de laboratorio de Glucosa en ayunas en el PoC de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-diagnostic-report-glucose-laboratory-result"
-* ^version = "0.1.5"
+* ^version = "0.1.6"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

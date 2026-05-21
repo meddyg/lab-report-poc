@@ -9,7 +9,7 @@ Title: "Documento de Reporte de Laboratorio"
 Description: "Modelo logico que define la estructura minima de un documento clinico de reporte de laboratorio para intercambio en el PoC de Costa Rica. Integra metadatos documentales, actores, resultado diagnostico y trazabilidad."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/LogicalModelDocumentLaboratoryReport"
-* ^version = "0.1.5"
+* ^version = "0.1.6"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

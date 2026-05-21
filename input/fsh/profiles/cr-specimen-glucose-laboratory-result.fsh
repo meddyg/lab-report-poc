@@ -10,7 +10,7 @@ Title: "Specimen Glucosa en Ayunas"
 Description: "Perfil de Specimen para la muestra utilizada en la prueba de glucosa en ayunas en el PoC de resultados de laboratorio en Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-specimen-glucose-laboratory-result"
-* ^version = "0.1.5"
+* ^version = "0.1.6"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
