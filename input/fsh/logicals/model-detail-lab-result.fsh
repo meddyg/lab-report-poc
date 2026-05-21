@@ -16,7 +16,7 @@ Description: "Modelo lógico que define los datos del detalle del resultado de l
 
 * codigoPrueba 1..1 code "Código de la prueba de laboratorio."
     "Código LOINC que identifica la determinación analítica reportada. En el alcance actual del PoC se utiliza principalmente para representar la prueba de hemoglobina glicosilada HbA1c."
-* codigoPrueba from LabTestHemoglobinaCodesSet (required)
+* codigoPrueba from LabTestLaboratoryCodesSet (required)
 
 * valor 1..1 string "Valor del resultado de laboratorio."
     "Valor observado del resultado de laboratorio. En el caso de HbA1c normalmente corresponderá a un valor numérico expresado en porcentaje, aunque el modelo lógico conserva flexibilidad para otras representaciones."
