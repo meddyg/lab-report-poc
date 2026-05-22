@@ -4,9 +4,9 @@
 // ==============================================================================================================
 
 Instance: SpecimenHbA1cLaboratoryResultExample
-InstanceOf: CRSpecimenHbA1cLaboratoryResult
-Title: "Muestra HbA1c"
-Description: "Ejemplo de muestra para prueba HbA1c."
+InstanceOf: CRSpecimenLaboratoryResult
+Title: "Muestra de Laboratorio - HbA1c"
+Description: "Ejemplo de Specimen para resultado de laboratorio de HbA1c."
 Usage: #example
 
 * language = #es
@@ -33,9 +33,9 @@ Usage: #example
 * code[0] = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor
 
 Instance: ObservationHbA1cLaboratoryResultExample
-InstanceOf: CRObservationHbA1cLaboratoryResult
-Title: "Resultado HbA1c"
-Description: "Ejemplo de observación de HbA1c en porcentaje."
+InstanceOf: CRObservationLaboratoryResult
+Title: "Observación de Laboratorio - HbA1c"
+Description: "Ejemplo de Observation para resultado de laboratorio de HbA1c en porcentaje."
 Usage: #example
 
 * language = #es
@@ -58,9 +58,9 @@ Usage: #example
 * referenceRange.text = "Rango de referencia para adulto: 4.0% - 5.6%"
 
 Instance: DiagnosticReportHbA1cLaboratoryResultExample
-InstanceOf: CRDiagnosticReportHbA1cLaboratoryResult
-Title: "Reporte Diagnóstico HbA1c"
-Description: "Ejemplo de DiagnosticReport para resultado de laboratorio HbA1c."
+InstanceOf: CRDiagnosticReportLaboratoryResult
+Title: "Reporte Diagnóstico de Laboratorio - HbA1c"
+Description: "Ejemplo de DiagnosticReport para resultado de laboratorio de HbA1c."
 Usage: #example
 
 * language = #es
@@ -78,9 +78,9 @@ Usage: #example
 * conclusion = "Resultado de HbA1c por encima del rango esperado para control glucémico normal."
 
 Instance: CompositionHbA1cLaboratoryResultExample
-InstanceOf: CRCompositionHbA1cLaboratoryResult
-Title: "Documento Clínico de Resultado HbA1c"
-Description: "Ejemplo de Composition que centra el documento clínico de laboratorio en HbA1c."
+InstanceOf: CRCompositionLaboratoryResult
+Title: "Documento Clínico de Laboratorio - HbA1c"
+Description: "Ejemplo de Composition para documento clínico de resultado de laboratorio de HbA1c."
 Usage: #example
 
 * language = #es
@@ -97,9 +97,9 @@ Usage: #example
 * section[0].entry[0] = Reference(DiagnosticReportHbA1cLaboratoryResultExample)
 
 Instance: BundleHbA1cLaboratoryResultDocumentExample
-InstanceOf: CRBundleHbA1cLaboratoryResult
-Title: "Bundle Documento HbA1c"
-Description: "Ejemplo de Bundle tipo document centrado en Composition y DiagnosticReport para intercambio de resultado HbA1c."
+InstanceOf: CRBundleLaboratoryResult
+Title: "Bundle Documento de Laboratorio - HbA1c"
+Description: "Ejemplo de Bundle tipo document centrado en Composition y DiagnosticReport para intercambio de resultado de laboratorio de HbA1c."
 Usage: #example
 
 * type = #document

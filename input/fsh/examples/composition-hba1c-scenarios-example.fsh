@@ -3,8 +3,8 @@
 // ==============================================================================================================
 
 Instance: CompositionHbA1cTamizajeEBAISExample
-InstanceOf: CRCompositionHbA1cLaboratoryResult
-Title: "Composition HbA1c - Tamizaje EBAIS"
+InstanceOf: CRCompositionLaboratoryResult
+Title: "Composition Laboratorio - Tamizaje EBAIS (HbA1c)"
 Description: "Ejemplo de Composition para documento clínico de tamizaje HbA1c emitido desde un EBAIS de la CCSS."
 Usage: #example
 
@@ -22,8 +22,8 @@ Usage: #example
 * section[0].entry[0] = Reference(DiagnosticReportHbA1cTamizajeEBAISExample)
 
 Instance: CompositionHbA1cSeguimientoEBAISExample
-InstanceOf: CRCompositionHbA1cLaboratoryResult
-Title: "Composition HbA1c - Seguimiento EBAIS"
+InstanceOf: CRCompositionLaboratoryResult
+Title: "Composition Laboratorio - Seguimiento EBAIS (HbA1c)"
 Description: "Ejemplo de Composition para documento clínico de seguimiento HbA1c en primer nivel de atención."
 Usage: #example
 
@@ -41,8 +41,8 @@ Usage: #example
 * section[0].entry[0] = Reference(DiagnosticReportHbA1cSeguimientoEBAISExample)
 
 Instance: CompositionHbA1cHospitalControlExample
-InstanceOf: CRCompositionHbA1cLaboratoryResult
-Title: "Composition HbA1c - Control Hospitalario"
+InstanceOf: CRCompositionLaboratoryResult
+Title: "Composition Laboratorio - Control Hospitalario (HbA1c)"
 Description: "Ejemplo de Composition para documento clínico de resultado HbA1c emitido desde laboratorio hospitalario."
 Usage: #example
 

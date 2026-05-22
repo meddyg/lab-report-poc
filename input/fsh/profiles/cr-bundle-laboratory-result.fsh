@@ -1,5 +1,5 @@
 // ==============================================================================================================
-// Profile: Bundle Documento HbA1c para Resultados de Laboratorio
+// Profile: Bundle Documento de Resultados de Laboratorio
 // ==============================================================================================================
 
 Invariant: CRBundleDR1
@@ -42,14 +42,14 @@ Description: "La primera entrada del documento debe ser Composition."
 Severity: #error
 Expression: "entry.first().resource.ofType(Composition).exists()"
 
-Profile: CRBundleHbA1cLaboratoryResult
+Profile: CRBundleLaboratoryResult
 Parent: Bundle
-Id: cr-bundle-hba1c-laboratory-result
-Title: "Bundle HbA1c"
-Description: "Perfil de Bundle tipo document para intercambio de resultado de laboratorio HbA1c centrado en Composition y DiagnosticReport en el PoC de Costa Rica."
+Id: cr-bundle-laboratory-result
+Title: "Bundle Laboratorio"
+Description: "Perfil de Bundle tipo document para intercambio de resultados de laboratorio (HbA1c y glucosa en ayunas) en el PoC de Costa Rica."
 
-* ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-bundle-hba1c-laboratory-result"
-* ^version = "0.1.6"
+* ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-bundle-laboratory-result"
+* ^version = "0.1.7"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -59,11 +59,11 @@ Description: "Perfil de Bundle tipo document para intercambio de resultado de la
 * type 1..1 MS
 * type = #document
 * type ^short = "Bundle document"
-* type ^definition = "Indica que el recurso es un Bundle de tipo document, usado para transportar un documento clínico completo del resultado HbA1c con sus recursos enlazados."
+* type ^definition = "Indica que el recurso es un Bundle de tipo document, usado para transportar un documento clínico completo de resultados de laboratorio con sus recursos enlazados."
 
 * identifier 1..1 MS
 * identifier ^short = "Identificador del documento"
-* identifier ^definition = "Identificador de negocio del Bundle document que permite reconocer de forma única el documento clínico de resultado HbA1c durante intercambio, almacenamiento o auditoría."
+* identifier ^definition = "Identificador de negocio del Bundle document que permite reconocer de forma única el documento clínico de resultados de laboratorio durante intercambio, almacenamiento o auditoría."
 * identifier.system 1..1 MS
 * identifier.system ^short = "Sistema del identificador del documento"
 * identifier.system ^definition = "Namespace o sistema que gobierna el identificador del Bundle document. Permite comprender el origen del identificador en el contexto del PoC."
@@ -100,20 +100,20 @@ Description: "Perfil de Bundle tipo document para intercambio de resultado de la
 	practitionerRole 0..*
 * entry[composition] MS
 * entry[composition] ^short = "Entrada de Composition"
-* entry[composition] ^definition = "Slice que contiene la Composition principal del documento clínico. Debe existir exactamente una para estructurar el reporte HbA1c."
-* entry[composition].resource only CRCompositionHbA1cLaboratoryResult
+* entry[composition] ^definition = "Slice que contiene la Composition principal del documento clínico. Debe existir exactamente una para estructurar el reporte de laboratorio."
+* entry[composition].resource only CRCompositionLaboratoryResult
 * entry[diagnosticReport] MS
 * entry[diagnosticReport] ^short = "Entrada de DiagnosticReport"
-* entry[diagnosticReport] ^definition = "Slice que contiene el DiagnosticReport principal del documento. Debe existir exactamente uno y representar el reporte analítico HbA1c."
-* entry[diagnosticReport].resource only CRDiagnosticReportHbA1cLaboratoryResult
+* entry[diagnosticReport] ^definition = "Slice que contiene el DiagnosticReport principal del documento. Debe existir exactamente uno y representar el reporte analítico de laboratorio."
+* entry[diagnosticReport].resource only CRDiagnosticReportLaboratoryResult
 * entry[patient] MS
 * entry[patient] ^short = "Entrada de Patient"
 * entry[patient] ^definition = "Slice que contiene el paciente referido por el documento clínico y por el resto de recursos relacionados."
 * entry[patient].resource only CRPatientLaboratoryResult
 * entry[observation] MS
 * entry[observation] ^short = "Entradas de Observation"
-* entry[observation] ^definition = "Slice que contiene una o más observaciones analíticas vinculadas al DiagnosticReport. En este PoC debe incluir la observación HbA1c."
-* entry[observation].resource only CRObservationHbA1cLaboratoryResult
+* entry[observation] ^definition = "Slice que contiene una o más observaciones analíticas vinculadas al DiagnosticReport, como HbA1c o glucosa en ayunas."
+* entry[observation].resource only CRObservationLaboratoryResult
 * entry[organization] MS
 * entry[organization] ^short = "Entradas de Organization"
 * entry[organization] ^definition = "Slice para las organizaciones involucradas en la emisión o jerarquía organizacional del resultado, como laboratorio, hospital o CCSS."
@@ -121,7 +121,7 @@ Description: "Perfil de Bundle tipo document para intercambio de resultado de la
 * entry[specimen] MS
 * entry[specimen] ^short = "Entradas de Specimen"
 * entry[specimen] ^definition = "Slice para las muestras biológicas relacionadas con las observaciones y reportes incluidos en el documento clínico."
-* entry[specimen].resource only CRSpecimenHbA1cLaboratoryResult
+* entry[specimen].resource only CRSpecimenLaboratoryResult
 * entry[practitioner] MS
 * entry[practitioner] ^short = "Entradas de Practitioner"
 * entry[practitioner] ^definition = "Slice para profesionales individuales involucrados en el flujo del resultado, cuando se requiera incluir su recurso explícitamente dentro del documento."

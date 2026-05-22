@@ -3,8 +3,8 @@
 // ==============================================================================================================
 
 Instance: ObservationHbA1cTamizajeEBAISExample
-InstanceOf: CRObservationHbA1cLaboratoryResult
-Title: "Observation HbA1c - Tamizaje EBAIS"
+InstanceOf: CRObservationLaboratoryResult
+Title: "Observation Laboratorio - Tamizaje EBAIS (HbA1c)"
 Description: "Ejemplo de observación HbA1c para tamizaje metabólico en primer nivel de atención de la CCSS con resultado dentro de rango esperado."
 Usage: #example
 
@@ -37,8 +37,8 @@ Usage: #example
 * note.text = "Escenario de tamizaje preventivo en EBAIS para persona sin antecedente documentado de diabetes."
 
 Instance: ObservationHbA1cSeguimientoEBAISExample
-InstanceOf: CRObservationHbA1cLaboratoryResult
-Title: "Observation HbA1c - Seguimiento EBAIS"
+InstanceOf: CRObservationLaboratoryResult
+Title: "Observation Laboratorio - Seguimiento EBAIS (HbA1c)"
 Description: "Ejemplo de observación HbA1c para seguimiento ambulatorio en EBAIS con resultado elevado compatible con control subóptimo o prediabetes/diabetes según contexto clínico."
 Usage: #example
 
@@ -71,8 +71,8 @@ Usage: #example
 * note.text = "Escenario de control ambulatorio de paciente en seguimiento por alteración glucémica en red CCSS."
 
 Instance: ObservationHbA1cHospitalControlExample
-InstanceOf: CRObservationHbA1cLaboratoryResult
-Title: "Observation HbA1c - Control Hospitalario"
+InstanceOf: CRObservationLaboratoryResult
+Title: "Observation Laboratorio - Control Hospitalario (HbA1c)"
 Description: "Ejemplo de observación HbA1c para paciente en seguimiento hospitalario con mal control metabólico."
 Usage: #example
 

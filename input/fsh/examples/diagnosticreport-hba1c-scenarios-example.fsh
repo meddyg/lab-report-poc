@@ -3,8 +3,8 @@
 // ==============================================================================================================
 
 Instance: DiagnosticReportHbA1cTamizajeEBAISExample
-InstanceOf: CRDiagnosticReportHbA1cLaboratoryResult
-Title: "DiagnosticReport HbA1c - Tamizaje EBAIS"
+InstanceOf: CRDiagnosticReportLaboratoryResult
+Title: "DiagnosticReport Laboratorio - Tamizaje EBAIS (HbA1c)"
 Description: "Ejemplo de DiagnosticReport para tamizaje HbA1c en primer nivel de atención de la CCSS."
 Usage: #example
 
@@ -24,8 +24,8 @@ Usage: #example
 * note.text = "El reporte corresponde a toma y procesamiento realizados en el primer nivel de atención."
 
 Instance: DiagnosticReportHbA1cSeguimientoEBAISExample
-InstanceOf: CRDiagnosticReportHbA1cLaboratoryResult
-Title: "DiagnosticReport HbA1c - Seguimiento EBAIS"
+InstanceOf: CRDiagnosticReportLaboratoryResult
+Title: "DiagnosticReport Laboratorio - Seguimiento EBAIS (HbA1c)"
 Description: "Ejemplo de DiagnosticReport para seguimiento de paciente en EBAIS con resultado HbA1c alterado."
 Usage: #example
 
@@ -45,8 +45,8 @@ Usage: #example
 * note.text = "Escenario pensado para control longitudinal en red de atención primaria CCSS."
 
 Instance: DiagnosticReportHbA1cHospitalControlExample
-InstanceOf: CRDiagnosticReportHbA1cLaboratoryResult
-Title: "DiagnosticReport HbA1c - Control Hospitalario"
+InstanceOf: CRDiagnosticReportLaboratoryResult
+Title: "DiagnosticReport Laboratorio - Control Hospitalario (HbA1c)"
 Description: "Ejemplo de DiagnosticReport emitido por laboratorio hospitalario para paciente con diabetes en seguimiento especializado."
 Usage: #example
 

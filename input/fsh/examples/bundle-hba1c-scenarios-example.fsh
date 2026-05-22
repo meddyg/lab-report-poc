@@ -3,8 +3,8 @@
 // ==============================================================================================================
 
 Instance: BundleHbA1cTamizajeEBAISExample
-InstanceOf: CRBundleHbA1cLaboratoryResult
-Title: "Bundle HbA1c - Tamizaje EBAIS"
+InstanceOf: CRBundleLaboratoryResult
+Title: "Bundle Laboratorio - Tamizaje EBAIS (HbA1c)"
 Description: "Ejemplo de Bundle document para intercambio de resultado HbA1c en escenario de tamizaje desde un EBAIS de la CCSS."
 Usage: #example
 
@@ -44,8 +44,8 @@ Usage: #example
 * entry[practitionerRole].resource = PractitionerRoleEBAISGoicoechea2LabExample
 
 Instance: BundleHbA1cSeguimientoEBAISExample
-InstanceOf: CRBundleHbA1cLaboratoryResult
-Title: "Bundle HbA1c - Seguimiento EBAIS"
+InstanceOf: CRBundleLaboratoryResult
+Title: "Bundle Laboratorio - Seguimiento EBAIS (HbA1c)"
 Description: "Ejemplo de Bundle document para intercambio de resultado HbA1c en seguimiento ambulatorio desde un EBAIS de la CCSS."
 Usage: #example
 
@@ -85,8 +85,8 @@ Usage: #example
 * entry[practitionerRole].resource = PractitionerRoleEBAISGoicoechea2LabExample
 
 Instance: BundleHbA1cHospitalControlExample
-InstanceOf: CRBundleHbA1cLaboratoryResult
-Title: "Bundle HbA1c - Control Hospitalario"
+InstanceOf: CRBundleLaboratoryResult
+Title: "Bundle Laboratorio - Control Hospitalario (HbA1c)"
 Description: "Ejemplo de Bundle document para intercambio de resultado HbA1c emitido desde laboratorio hospitalario de la CCSS."
 Usage: #example
 

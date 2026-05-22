@@ -89,7 +89,7 @@ Usage: #example
 * gender = #male
 
 Instance: SpecimenHbA1cTamizajeEBAISExample
-InstanceOf: CRSpecimenHbA1cLaboratoryResult
+InstanceOf: CRSpecimenLaboratoryResult
 Title: "Muestra HbA1c Tamizaje EBAIS"
 Description: "Muestra de sangre venosa para escenario de tamizaje HbA1c en EBAIS."
 Usage: #example
@@ -104,7 +104,7 @@ Usage: #example
 * receivedTime = "2026-04-08T07:35:00-06:00"
 
 Instance: SpecimenHbA1cSeguimientoEBAISExample
-InstanceOf: CRSpecimenHbA1cLaboratoryResult
+InstanceOf: CRSpecimenLaboratoryResult
 Title: "Muestra HbA1c Seguimiento EBAIS"
 Description: "Muestra de sangre venosa para control periódico de paciente crónico en EBAIS."
 Usage: #example
@@ -119,7 +119,7 @@ Usage: #example
 * receivedTime = "2026-04-08T08:50:00-06:00"
 
 Instance: SpecimenHbA1cHospitalControlExample
-InstanceOf: CRSpecimenHbA1cLaboratoryResult
+InstanceOf: CRSpecimenLaboratoryResult
 Title: "Muestra HbA1c Control Hospitalario"
 Description: "Muestra de sangre venosa procesada en un laboratorio hospitalario para seguimiento de diabetes."
 Usage: #example

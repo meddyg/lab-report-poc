@@ -8,7 +8,7 @@ Title: "Tipos de Documento Clínico de Laboratorio"
 Description: "Códigos LOINC válidos para clasificar documentos clínicos de resultados de laboratorio en el contexto de esta guía."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/ValueSet/cr-laboratory-document-type-codes"
-* ^version = "0.1.6"
+* ^version = "0.1.7"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

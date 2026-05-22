@@ -4,7 +4,7 @@ Title:          "Tipos de Identificadores"
 Description:    "Listado de tipos de identificadores para personas físicas y jurídicas."
 
 * insert CodeSystemMeta
-* insert RuleSetStatus (0, draft, pc)
+* ^status = #active
 
 * #cedula-nacional "Cédula Nacional" "Identificador oficial para ciudadanos costarricenses."
 * #pasaporte "Pasaporte" "Identificador para pasaporte."

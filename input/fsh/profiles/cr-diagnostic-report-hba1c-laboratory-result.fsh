@@ -1,5 +1,5 @@
 // ==============================================================================================================
-// Profile: DiagnosticReport HbA1c para Resultados de Laboratorio
+// Profile: DiagnosticReport para Resultados de Laboratorio
 // Basado en: LogicalModelReportLaboratoryResult
 // ==============================================================================================================
 
@@ -13,14 +13,14 @@ Description: "La fecha y hora de emisión del reporte no puede ser futura."
 Severity: #error
 Expression: "$this <= now()"
 
-Profile: CRDiagnosticReportHbA1cLaboratoryResult
+Profile: CRDiagnosticReportLaboratoryResult
 Parent: DiagnosticReport
-Id: cr-diagnostic-report-hba1c-laboratory-result
-Title: "DiagnosticReport HbA1c"
-Description: "Perfil de reporte diagnóstico para representar resultados de laboratorio de Hemoglobina Glicosilada (HbA1c) en el PoC de Costa Rica."
+Id: cr-diagnostic-report-laboratory-result
+Title: "DiagnosticReport Laboratorio"
+Description: "Perfil de reporte diagnóstico para representar resultados de laboratorio en el PoC de Costa Rica, incluyendo HbA1c y glucosa en ayunas."
 
-* ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-diagnostic-report-hba1c-laboratory-result"
-* ^version = "0.1.6"
+* ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-diagnostic-report-laboratory-result"
+* ^version = "0.1.7"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -29,7 +29,7 @@ Description: "Perfil de reporte diagnóstico para representar resultados de labo
 * status 1..1 MS
 * status = #final
 * status ^short = "Estado final del reporte"
-* status ^definition = "Estado del DiagnosticReport. En este perfil se fija como final para indicar que el reporte HbA1c ya fue emitido formalmente por el laboratorio o sistema emisor."
+* status ^definition = "Estado del DiagnosticReport. En este perfil se fija como final para indicar que el reporte de laboratorio ya fue emitido formalmente por el laboratorio o sistema emisor."
 
 * category 1..1 MS
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
@@ -37,19 +37,19 @@ Description: "Perfil de reporte diagnóstico para representar resultados de labo
 * category ^definition = "Clasificación general del reporte como reporte de laboratorio, permitiendo a los sistemas consumidores reconocer el tipo documental y aplicar procesamiento específico."
 
 * code 1..1 MS
-* code = $loinc#4548-4
+* code from https://hl7.meddyg.com/fhir/laboratory-results/ValueSet/lab-test-codes (required)
 * code ^short = "Código principal del reporte"
-* code ^definition = "Código clínico que identifica que el reporte se refiere al resultado HbA1c del PoC. Sirve como resumen semántico del contenido principal del DiagnosticReport."
+* code ^definition = "Código clínico LOINC que identifica la prueba de laboratorio reportada en el PoC, como HbA1c o glucosa en ayunas."
 
 * subject 1..1 MS
 * subject only Reference(CRPatientLaboratoryResult)
 * subject ^short = "Paciente del reporte"
-* subject ^definition = "Referencia al paciente cuyo resultado HbA1c está siendo reportado. Es el vínculo central entre el documento clínico y la persona atendida."
+* subject ^definition = "Referencia al paciente cuyo resultado de laboratorio está siendo reportado. Es el vínculo central entre el documento clínico y la persona atendida."
 
 * effective[x] 1..1 MS
 * effective[x] only dateTime
 * effective[x] ^short = "Momento clínico del estudio"
-* effective[x] ^definition = "Fecha y hora clínica a la que corresponde el estudio o resultado HbA1c contenido en el reporte."
+* effective[x] ^definition = "Fecha y hora clínica a la que corresponde el estudio o resultado contenido en el reporte."
 * effectiveDateTime obeys cr-dr-effective-no-future
 
 * issued 1..1 MS
@@ -60,26 +60,26 @@ Description: "Perfil de reporte diagnóstico para representar resultados de labo
 * performer 1..* MS
 * performer only Reference(CROrganizationLaboratoryResult or CRPractitionerLaboratoryResult or CRPractitionerRoleLaboratoryResult)
 * performer ^short = "Emisores del reporte"
-* performer ^definition = "Actores organizacionales o profesionales responsables de generar, validar o emitir el reporte diagnóstico de HbA1c."
+* performer ^definition = "Actores organizacionales o profesionales responsables de generar, validar o emitir el reporte diagnóstico de laboratorio."
 
 * specimen 0..* MS
-* specimen only Reference(CRSpecimenHbA1cLaboratoryResult)
+* specimen only Reference(CRSpecimenLaboratoryResult)
 * specimen ^short = "Muestras asociadas al reporte"
-* specimen ^definition = "Referencias a las muestras que sustentan el contenido analítico del reporte HbA1c. Permiten mantener trazabilidad entre muestra, observación y documento clínico."
+* specimen ^definition = "Referencias a las muestras que sustentan el contenido analítico del reporte de laboratorio. Permiten mantener trazabilidad entre muestra, observación y documento clínico."
 
 * result 1..* MS
-* result only Reference(CRObservationHbA1cLaboratoryResult)
+* result only Reference(CRObservationLaboratoryResult)
 * result ^short = "Observaciones incluidas en el reporte"
-* result ^definition = "Referencias a las observaciones de laboratorio que constituyen el contenido analítico del reporte. Para este PoC deben incluir al menos la observación HbA1c."
+* result ^definition = "Referencias a las observaciones de laboratorio que constituyen el contenido analítico del reporte."
 
 * conclusion 0..1 MS
 * conclusion ^short = "Conclusión clínica resumida"
-* conclusion ^definition = "Síntesis interpretativa opcional del resultado HbA1c, pensada para ofrecer una lectura general del hallazgo sin reemplazar la observación estructurada."
+* conclusion ^definition = "Síntesis interpretativa opcional del resultado, pensada para ofrecer una lectura general del hallazgo sin reemplazar la observación estructurada."
 * note 0..* MS
 * note ^short = "Notas del reporte"
-* note ^definition = "Comentarios adicionales del laboratorio o del sistema emisor sobre el reporte HbA1c, incluyendo aclaraciones técnicas, administrativas o clínicas."
+* note ^definition = "Comentarios adicionales del laboratorio o del sistema emisor sobre el reporte, incluyendo aclaraciones técnicas, administrativas o clínicas."
 
 // Elementos que no se incluyen en el perfil para resultados de laboratorio:
 * encounter 0..0
 * encounter ^short = "Sin encuentro en el PoC"
-* encounter ^definition = "El PoC actual no modela explícitamente el encuentro asistencial asociado al resultado HbA1c, por lo que este elemento se excluye del perfil."
+* encounter ^definition = "El PoC actual no modela explícitamente el encuentro asistencial asociado al resultado de laboratorio, por lo que este elemento se excluye del perfil."

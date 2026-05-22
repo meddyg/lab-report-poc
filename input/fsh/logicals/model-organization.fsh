@@ -9,7 +9,7 @@ Title: "Datos de la Organización"
 Description: "Modelo lógico que define los datos de la organización necesarios para representar resultados de laboratorio, basado en el perfil de organización del CORE de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/LogicalModelOrganizationLaboratoryResult"
-* ^version = "0.1.6"
+* ^version = "0.1.7"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

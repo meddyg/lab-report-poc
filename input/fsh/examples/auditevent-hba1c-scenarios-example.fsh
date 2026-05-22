@@ -21,12 +21,12 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>AuditEvent: FHIR Repository registró DiagnosticReport HbA1c (create).</p></div>"
 
-* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest "RESTful Operation"
+* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
 * code = http://hl7.org/fhir/restful-interaction#create "create"
 * action = #C
 * severity = #informational
 * recorded = "2026-04-08T08:25:10-06:00"
-* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
+* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0
 
 * agent[solicitante].requestor = true
 * agent[solicitante].type = http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
@@ -39,7 +39,7 @@ Usage: #example
 * source.observer = Reference(OrganizationMeddygRepositoryExample)
 
 * entity[0].what = Reference(DiagnosticReportHbA1cTamizajeEBAISExample)
-* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#4 "Domain Resource"
+* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#4
 
 // --- 2. FHIR Repository: consulta de resultado por Client FHIR (read) ---
 Instance: AuditEventRepositoryReadDiagnosticReportExample
@@ -52,12 +52,12 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>AuditEvent: FHIR Repository procesó consulta de DiagnosticReport HbA1c por Client FHIR (read).</p></div>"
 
-* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest "RESTful Operation"
+* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
 * code = http://hl7.org/fhir/restful-interaction#read "read"
 * action = #R
 * severity = #informational
 * recorded = "2026-04-08T10:05:00-06:00"
-* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
+* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0
 
 * agent[solicitante].requestor = true
 * agent[solicitante].type = http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
@@ -70,7 +70,7 @@ Usage: #example
 * source.observer = Reference(OrganizationMeddygRepositoryExample)
 
 * entity[0].what = Reference(DiagnosticReportHbA1cTamizajeEBAISExample)
-* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#4 "Domain Resource"
+* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#4
 
 // --- 3. Document Registry: registro del documento en índice (create) ---
 Instance: AuditEventDocumentRegistryCreateExample
@@ -83,12 +83,12 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>AuditEvent: Document Registry indexó documento de resultado HbA1c (create).</p></div>"
 
-* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest "RESTful Operation"
+* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
 * code = http://hl7.org/fhir/restful-interaction#create "create"
 * action = #C
 * severity = #informational
 * recorded = "2026-04-08T08:25:05-06:00"
-* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
+* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0
 
 * agent[solicitante].requestor = true
 * agent[solicitante].type = http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
@@ -101,7 +101,7 @@ Usage: #example
 * source.observer = Reference(OrganizationDocumentRegistryExample)
 
 * entity[0].what = Reference(DiagnosticReportHbA1cTamizajeEBAISExample)
-* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#4 "Domain Resource"
+* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#4
 
 // --- 4. Patient Identity Source: resolución de identidad del paciente (query) ---
 Instance: AuditEventPatientIdentityQueryExample
@@ -114,12 +114,12 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>AuditEvent: Patient Identity Source procesó consulta de identidad de paciente (query).</p></div>"
 
-* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest "RESTful Operation"
+* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
 * code = http://hl7.org/fhir/restful-interaction#search-type "search-type"
 * action = #E
 * severity = #informational
 * recorded = "2026-04-08T10:04:50-06:00"
-* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
+* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0
 
 * agent[solicitante].requestor = true
 * agent[solicitante].type = http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
@@ -132,7 +132,7 @@ Usage: #example
 * source.observer = Reference(OrganizationPatientIdentitySourceExample)
 
 * entity[0].what = Reference(PatientHbA1cTamizajeEBAISExample)
-* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#1 "Patient"
+* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#1
 
 // --- 5. Consent: consulta del consentimiento previo del paciente (read) ---
 Instance: AuditEventConsentReadExample
@@ -145,12 +145,12 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>AuditEvent: Sistema de Consent procesó consulta de consentimiento previo del paciente (read).</p></div>"
 
-* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest "RESTful Operation"
+* category = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
 * code = http://hl7.org/fhir/restful-interaction#read "read"
 * action = #R
 * severity = #informational
 * recorded = "2026-04-08T10:04:55-06:00"
-* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
+* outcome.code = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0
 
 * agent[solicitante].requestor = true
 * agent[solicitante].type = http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
@@ -163,7 +163,7 @@ Usage: #example
 * source.observer = Reference(OrganizationConsentServiceExample)
 
 * entity[0].what.display = "Consent HbA1c Tamizaje - Paciente autorizado"
-* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#4 "Domain Resource"
+* entity[0].role = http://terminology.hl7.org/CodeSystem/object-role#4
 
 // ==============================================================================================================
 // Organizaciones de soporte para ejemplos AuditEvent

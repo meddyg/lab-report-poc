@@ -18,7 +18,7 @@ Title: "AuditEvent Resultado de Laboratorio"
 Description: "Perfil de auditoría para registrar los eventos de acceso y modificación de resultados de laboratorio en el flujo del PoC de Costa Rica. Cada actor del flujo (FHIR Repository, Document Registry, Patient Identity Source, Consent, Client FHIR) debe generar un AuditEvent por cada acción relevante."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-auditevent-laboratory-result"
-* ^version = "0.1.6"
+* ^version = "0.1.7"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
