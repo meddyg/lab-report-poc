@@ -19,7 +19,7 @@ Title: "Specimen Laboratorio"
 Description: "Perfil de muestra biológica para pruebas de laboratorio (HbA1c y glucosa en ayunas) en el PoC de resultados de laboratorio."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-specimen-laboratory-result"
-* ^version = "0.1.7"
+* ^version = "0.1.8"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

@@ -49,7 +49,7 @@ Title: "Bundle Laboratorio"
 Description: "Perfil de Bundle tipo document para intercambio de resultados de laboratorio (HbA1c y glucosa en ayunas) en el PoC de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-bundle-laboratory-result"
-* ^version = "0.1.7"
+* ^version = "0.1.8"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

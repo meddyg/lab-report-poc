@@ -9,7 +9,7 @@ Title: "Detalle del Resultado de Laboratorio"
 Description: "Modelo lógico que define los datos del detalle del resultado de laboratorio necesarios para representar resultados de laboratorio, basado en la documentación para este caso de uso." 
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/LogicalModelDetailResultLaboratoryResult"
-* ^version = "0.1.7"
+* ^version = "0.1.8"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
@@ -23,7 +23,7 @@ Description: "Modelo lógico que define los datos del detalle del resultado de l
 
 * unidadMedida 1..1 code "Unidad de medida del resultado de laboratorio."
     "Unidad de medida utilizada para expresar el resultado. Para HbA1c en este PoC se espera típicamente porcentaje, codificado formalmente para garantizar interoperabilidad entre sistemas."
-* unidadMedida from http://unitsofmeasure.org (required)
+* unidadMedida from http://hl7.org/fhir/ValueSet/ucum-units (required)
 
 * metodo 0..1 code "Método utilizado para la prueba de laboratorio."
     "Método o técnica analítica empleada para obtener el resultado, por ejemplo inmunoensayo u otro método validado. Este dato aporta contexto técnico útil para comparabilidad y auditoría."

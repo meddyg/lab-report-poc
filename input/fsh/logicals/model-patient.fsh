@@ -9,19 +9,16 @@ Title: "Datos del Paciente"
 Description: "Modelo lógico que define los datos del paciente necesarios para representar resultados de laboratorio, basado en el perfil de paciente del CORE de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/LogicalModelPatientLaboratoryResult"
-* ^version = "0.1.7"
+* ^version = "0.1.8"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
 
-// ─── Datos generales del Paciente ─────────────────────────────────────    
+// ─── Datos generales del Paciente ─────────────────────────────────────
 
-* identificacion 1..1 string "Identificación principal del paciente."
-	"Valor principal del identificador con el que el paciente es reconocido dentro del PoC de resultados de laboratorio en Costa Rica. Debe corresponder al identificador utilizado por la organización emisora para vincular el resultado HbA1c con el expediente o registro correcto del paciente."
-
-* tipoIdentificador 1..1 code "Tipo de identificador del paciente."
-    "Tipo de identificador con el que se captura la identificación principal del paciente, por ejemplo cédula nacional u otro identificador permitido por el ecosistema costarricense. Este dato permite a los implementadores interpretar correctamente el valor registrado en identificacion."
-* tipoIdentificador from CRIdentifierTypesSet (required)
+* identificacion 1..* Identifier "Identificador(es) del paciente."
+    "Conjunto de identificadores del paciente en formato Identifier. Cada identificador debe incluir system y value, y su tipo debe pertenecer al conjunto CRIdentifierTypesSet (por ejemplo cédula nacional, pasaporte o DIMEX). Permite representar uno o varios identificadores por persona según la realidad operativa del emisor."
+* identificacion.type from CRIdentifierTypesSet (required)
 
 * primerNombre 1..1 string "Primer nombre del paciente."
     "Primer nombre oficial del paciente, utilizado para identificación humana, conciliación visual y presentación del resultado HbA1c en sistemas clínicos o administrativos."
