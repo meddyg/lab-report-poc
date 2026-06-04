@@ -13,3 +13,6 @@ Thumbs.db
 /docs
 */**/__pycache__/
 */**/*.pyc
+/connectathon-lab-results
+/scripts
+/generated
