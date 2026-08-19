@@ -42,6 +42,16 @@ Description: "La primera entrada del documento debe ser Composition."
 Severity: #error
 Expression: "entry.first().resource.ofType(Composition).exists()"
 
+Invariant: CRBundleJAdESSigFormat1
+Description: "Si existe firma, sigFormat debe declarar JAdES (application/jose o application/jose+json)."
+Severity: #error
+Expression: "sigFormat = 'application/jose' or sigFormat = 'application/jose+json'"
+
+Invariant: CRBundleJAdESData1
+Description: "Si existe firma, signature.data debe estar presente en base64Binary."
+Severity: #error
+Expression: "data.exists()"
+
 Profile: CRBundleLaboratoryResult
 Parent: Bundle
 Id: cr-bundle-laboratory-result
@@ -82,6 +92,26 @@ Description: "Perfil de Bundle tipo document para intercambio de resultados de l
 * link 0..0
 * link ^short = "Sin links globales"
 * link ^definition = "No se utilizan enlaces de navegación en el Bundle document del PoC, ya que se trata de un paquete clínico cerrado y no de una respuesta de búsqueda."
+
+* signature 0..1 MS
+* signature ^short = "Firma digital del Bundle document"
+* signature ^definition = "Firma digital del documento clínico en formato JAdES. El contenido firmado se transporta en signature.data como base64Binary."
+* signature obeys CRBundleJAdESSigFormat1 and CRBundleJAdESData1
+* signature.type 1..* MS
+* signature.type ^short = "Tipo de firma"
+* signature.type ^definition = "Tipo de firma según codificación estándar para indicar el propósito de la firma digital."
+* signature.when 1..1 MS
+* signature.when ^short = "Fecha y hora de la firma"
+* signature.when ^definition = "Instante en que se aplicó la firma digital sobre el Bundle."
+* signature.who 1..1 MS
+* signature.who ^short = "Firmante"
+* signature.who ^definition = "Identidad del actor que realizó la firma digital del Bundle."
+* signature.sigFormat 1..1 MS
+* signature.sigFormat ^short = "Formato de firma"
+* signature.sigFormat ^definition = "Formato de la firma digital. Para este perfil se utiliza JAdES (application/jose o application/jose+json)."
+* signature.data 1..1 MS
+* signature.data ^short = "Firma JAdES en base64"
+* signature.data ^definition = "Contenido de la firma digital JAdES codificado en base64Binary para su transporte en FHIR."
 
 * entry 5..* MS
 * entry ^short = "Entradas del documento clínico"
