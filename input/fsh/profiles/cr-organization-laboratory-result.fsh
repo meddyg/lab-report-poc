@@ -20,7 +20,7 @@ Title: "Organization - Resultados de Laboratorio"
 Description: "Perfil de organización que define los datos de la organización necesarios para representar resultados de laboratorio, basado en el modelo lógico LogicalModelOrganizationLaboratoryResult y el perfil de organización del CORE de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-organization-laboratory-result"
-* ^version = "0.1.8"
+* ^version = "0.2.0"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

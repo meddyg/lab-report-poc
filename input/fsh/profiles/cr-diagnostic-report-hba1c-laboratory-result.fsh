@@ -20,7 +20,7 @@ Title: "DiagnosticReport Laboratorio"
 Description: "Perfil de reporte diagnóstico para representar resultados de laboratorio en el PoC de Costa Rica, incluyendo HbA1c y glucosa en ayunas."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-diagnostic-report-laboratory-result"
-* ^version = "0.1.8"
+* ^version = "0.2.0"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

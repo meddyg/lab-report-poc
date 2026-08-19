@@ -1,7 +1,7 @@
 RuleSet:            CodeSystemMeta
 
 * ^language = #es
-* ^version = "0.1.8"
+* ^version = "0.2.0"
 * ^status = #draft
 * ^experimental = false
 * ^caseSensitive = true

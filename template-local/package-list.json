@@ -12,6 +12,14 @@
             "current": true
         },
         {
+            "version": "0.2.0",
+            "date": "2026-08-18",
+            "desc": "Release 0.2.0",
+            "path": "https://hl7.meddyg.com/fhir/laboratory-results/0.2.0",
+            "status": "release",
+            "sequence": "DSTU 1"
+        },
+        {
             "version": "0.1.8",
             "date": "2026-06-02",
             "desc": "Release 0.1.8",
