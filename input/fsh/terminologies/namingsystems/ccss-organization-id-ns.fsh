@@ -8,6 +8,7 @@ Usage: #definition
 
 * name = "CCSSOrganizationIdentifierNamingSystem"
 * title = "Sistema de Identificación de Organizaciones CCSS"
+* version = "0.2.0"
 * status = #active
 * kind = #identifier
 * date = "2026-04-07"

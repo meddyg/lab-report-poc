@@ -8,6 +8,7 @@ InstanceOf: CRSpecimenLaboratoryResult
 Title: "Muestra de Laboratorio - HbA1c"
 Description: "Ejemplo de Specimen para resultado de laboratorio de HbA1c."
 Usage: #example
+* insert VersionedExampleProfile(cr-specimen-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -23,6 +24,7 @@ InstanceOf: CRPractitionerRoleLaboratoryResult
 Title: "Rol Profesional Laboratorio Hospital México"
 Description: "Ejemplo de contexto organizacional del profesional que reporta resultados de laboratorio."
 Usage: #example
+* insert VersionedExampleProfile(cr-practitioner-role-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -37,6 +39,7 @@ InstanceOf: CRObservationLaboratoryResult
 Title: "Observación de Laboratorio - HbA1c"
 Description: "Ejemplo de Observation para resultado de laboratorio de HbA1c en porcentaje."
 Usage: #example
+* insert VersionedExampleProfile(cr-observation-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -62,6 +65,7 @@ InstanceOf: CRDiagnosticReportLaboratoryResult
 Title: "Reporte Diagnóstico de Laboratorio - HbA1c"
 Description: "Ejemplo de DiagnosticReport para resultado de laboratorio de HbA1c."
 Usage: #example
+* insert VersionedExampleProfile(cr-diagnostic-report-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -82,6 +86,7 @@ InstanceOf: CRCompositionLaboratoryResult
 Title: "Documento Clínico de Laboratorio - HbA1c"
 Description: "Ejemplo de Composition para documento clínico de resultado de laboratorio de HbA1c."
 Usage: #example
+* insert VersionedExampleProfile(cr-composition-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -101,6 +106,7 @@ InstanceOf: CRBundleLaboratoryResult
 Title: "Bundle Documento de Laboratorio - HbA1c"
 Description: "Ejemplo de Bundle tipo document centrado en Composition y DiagnosticReport para intercambio de resultado de laboratorio de HbA1c."
 Usage: #example
+* insert VersionedExampleProfile(cr-bundle-laboratory-result)
 
 * type = #document
 * identifier.system = "urn:ietf:rfc:3986"

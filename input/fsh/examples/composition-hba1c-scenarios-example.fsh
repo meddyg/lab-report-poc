@@ -7,6 +7,7 @@ InstanceOf: CRCompositionLaboratoryResult
 Title: "Composition Laboratorio - Tamizaje EBAIS (HbA1c)"
 Description: "Ejemplo de Composition para documento clínico de tamizaje HbA1c emitido desde un EBAIS de la CCSS."
 Usage: #example
+* insert VersionedExampleProfile(cr-composition-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -26,6 +27,7 @@ InstanceOf: CRCompositionLaboratoryResult
 Title: "Composition Laboratorio - Seguimiento EBAIS (HbA1c)"
 Description: "Ejemplo de Composition para documento clínico de seguimiento HbA1c en primer nivel de atención."
 Usage: #example
+* insert VersionedExampleProfile(cr-composition-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -45,6 +47,7 @@ InstanceOf: CRCompositionLaboratoryResult
 Title: "Composition Laboratorio - Control Hospitalario (HbA1c)"
 Description: "Ejemplo de Composition para documento clínico de resultado HbA1c emitido desde laboratorio hospitalario."
 Usage: #example
+* insert VersionedExampleProfile(cr-composition-laboratory-result)
 
 * language = #es
 * text.status = #generated

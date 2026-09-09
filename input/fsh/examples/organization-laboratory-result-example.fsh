@@ -9,6 +9,7 @@ InstanceOf: CROrganizationLaboratoryResult
 Title: "CCSS - Organización Madre"
 Description: "Ejemplo de la Caja Costarricense de Seguro Social (CCSS) como organización principal dentro del ecosistema de resultados de laboratorio."
 Usage: #example
+* insert VersionedExampleProfile(cr-organization-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -26,6 +27,7 @@ InstanceOf: CROrganizationLaboratoryResult
 Title: "Hospital México - Establecimiento"
 Description: "Ejemplo de un hospital público perteneciente a la CCSS."
 Usage: #example
+* insert VersionedExampleProfile(cr-organization-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -44,6 +46,7 @@ InstanceOf: CROrganizationLaboratoryResult
 Title: "Laboratorio Clínico Hospital México"
 Description: "Ejemplo de laboratorio perteneciente a un hospital público de la CCSS para el caso de uso inicial de resultados de laboratorio."
 Usage: #example
+* insert VersionedExampleProfile(cr-organization-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -62,6 +65,7 @@ InstanceOf: CROrganizationLaboratoryResult
 Title: "EBAIS Goicoechea 2 - Establecimiento"
 Description: "Ejemplo de un EBAIS perteneciente a la CCSS."
 Usage: #example
+* insert VersionedExampleProfile(cr-organization-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -80,6 +84,7 @@ InstanceOf: CROrganizationLaboratoryResult
 Title: "Laboratorio EBAIS Goicoechea 2"
 Description: "Ejemplo de laboratorio de primer nivel perteneciente a un EBAIS de la CCSS."
 Usage: #example
+* insert VersionedExampleProfile(cr-organization-laboratory-result)
 
 * language = #es
 * text.status = #generated

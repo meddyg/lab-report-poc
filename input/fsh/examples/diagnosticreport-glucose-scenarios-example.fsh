@@ -3,6 +3,7 @@ InstanceOf: CRDiagnosticReportLaboratoryResult
 Title: "DiagnosticReport Laboratorio - Glucosa en Ayunas"
 Description: "Ejemplo de recurso DiagnosticReport para resultado de laboratorio de glucosa en ayunas (LOINC 1558-6)"
 Usage: #example
+* insert VersionedExampleProfile(cr-diagnostic-report-laboratory-result)
 
 * status = #final
 * category = $v2-0074#LAB

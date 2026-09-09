@@ -3,6 +3,7 @@ InstanceOf: CRBundleLaboratoryResult
 Title: "Bundle Laboratorio - Glucosa en Ayunas"
 Description: "Ejemplo de Bundle document para intercambio de resultado de laboratorio de glucosa en ayunas"
 Usage: #example
+* insert VersionedExampleProfile(cr-bundle-laboratory-result)
 
 * type = #document
 * identifier.system = "urn:ietf:rfc:3986"

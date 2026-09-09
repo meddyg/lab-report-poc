@@ -3,6 +3,7 @@ InstanceOf: CRObservationLaboratoryResult
 Title: "Observation Laboratorio - Glucosa en Ayunas"
 Description: "Ejemplo de recurso Observation para resultado de laboratorio de glucosa en ayunas (LOINC 1558-6)"
 Usage: #example
+* insert VersionedExampleProfile(cr-observation-laboratory-result)
 
 * status = #final
 * category = $observation-category#laboratory

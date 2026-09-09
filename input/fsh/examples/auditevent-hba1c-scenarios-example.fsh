@@ -16,6 +16,7 @@ InstanceOf: CRAuditEventLaboratoryResult
 Title: "AuditEvent - FHIR Repository: Registro DiagnosticReport"
 Description: "AuditEvent generado por el FHIR Repository al recibir y persistir el DiagnosticReport HbA1c proveniente del laboratorio."
 Usage: #example
+* insert VersionedExampleProfile(cr-auditevent-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -47,6 +48,7 @@ InstanceOf: CRAuditEventLaboratoryResult
 Title: "AuditEvent - FHIR Repository: Consulta DiagnosticReport por Client FHIR"
 Description: "AuditEvent generado por el FHIR Repository cuando un Client FHIR consulta el resultado HbA1c de un paciente."
 Usage: #example
+* insert VersionedExampleProfile(cr-auditevent-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -78,6 +80,7 @@ InstanceOf: CRAuditEventLaboratoryResult
 Title: "AuditEvent - Document Registry: Registro en índice"
 Description: "AuditEvent generado por el Document Registry al indexar el documento de resultado HbA1c recibido del laboratorio."
 Usage: #example
+* insert VersionedExampleProfile(cr-auditevent-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -109,6 +112,7 @@ InstanceOf: CRAuditEventLaboratoryResult
 Title: "AuditEvent - Patient Identity Source: Resolución de identidad"
 Description: "AuditEvent generado por el Patient Identity Source al recibir una consulta de identidad del paciente desde el Client FHIR antes de acceder al resultado."
 Usage: #example
+* insert VersionedExampleProfile(cr-auditevent-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -140,6 +144,7 @@ InstanceOf: CRAuditEventLaboratoryResult
 Title: "AuditEvent - Consent: Consulta de consentimiento previo"
 Description: "AuditEvent generado por el sistema de Consent al ser consultado para verificar que el paciente autorizó el acceso al resultado HbA1c."
 Usage: #example
+* insert VersionedExampleProfile(cr-auditevent-laboratory-result)
 
 * language = #es
 * text.status = #generated

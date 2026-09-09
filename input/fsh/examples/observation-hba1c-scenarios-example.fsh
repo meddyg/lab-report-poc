@@ -7,6 +7,7 @@ InstanceOf: CRObservationLaboratoryResult
 Title: "Observation Laboratorio - Tamizaje EBAIS (HbA1c)"
 Description: "Ejemplo de observación HbA1c para tamizaje metabólico en primer nivel de atención de la CCSS con resultado dentro de rango esperado."
 Usage: #example
+* insert VersionedExampleProfile(cr-observation-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -41,6 +42,7 @@ InstanceOf: CRObservationLaboratoryResult
 Title: "Observation Laboratorio - Seguimiento EBAIS (HbA1c)"
 Description: "Ejemplo de observación HbA1c para seguimiento ambulatorio en EBAIS con resultado elevado compatible con control subóptimo o prediabetes/diabetes según contexto clínico."
 Usage: #example
+* insert VersionedExampleProfile(cr-observation-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -75,6 +77,7 @@ InstanceOf: CRObservationLaboratoryResult
 Title: "Observation Laboratorio - Control Hospitalario (HbA1c)"
 Description: "Ejemplo de observación HbA1c para paciente en seguimiento hospitalario con mal control metabólico."
 Usage: #example
+* insert VersionedExampleProfile(cr-observation-laboratory-result)
 
 * language = #es
 * text.status = #generated

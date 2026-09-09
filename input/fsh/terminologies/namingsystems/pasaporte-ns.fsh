@@ -8,6 +8,7 @@ Usage: #definition
 
 * name = "PasaporteCRNamingSystem"
 * title = "Pasaporte"
+* version = "0.2.0"
 * status = #active
 * kind = #identifier
 * date = "2026-05-14"

@@ -8,6 +8,7 @@ InstanceOf: CRPractitionerLaboratoryResult
 Title: "Profesional de Salud para Resultados de Laboratorio"
 Description: "Ejemplo de un recurso Practitioner para representación de PoC resultados de laboratorio."
 Usage: #example
+* insert VersionedExampleProfile(cr-practitioner-laboratory-result)
 
 * language = #es
 * text.status = #generated

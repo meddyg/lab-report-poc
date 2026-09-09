@@ -7,6 +7,7 @@ InstanceOf: CRPractitionerRoleLaboratoryResult
 Title: "Rol Profesional Laboratorio EBAIS Goicoechea 2"
 Description: "Ejemplo del rol organizacional del profesional que reporta resultados HbA1c desde un laboratorio de primer nivel de atención en la CCSS."
 Usage: #example
+* insert VersionedExampleProfile(cr-practitioner-role-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -21,6 +22,7 @@ InstanceOf: CRPatientLaboratoryResult
 Title: "Paciente HbA1c Tamizaje EBAIS"
 Description: "Paciente ejemplo para escenario de tamizaje metabólico en EBAIS dentro del primer nivel de atención en Costa Rica."
 Usage: #example
+* insert VersionedExampleProfile(cr-patient-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -45,6 +47,7 @@ InstanceOf: CRPatientLaboratoryResult
 Title: "Paciente HbA1c Seguimiento EBAIS"
 Description: "Paciente ejemplo para seguimiento longitudinal de control glucémico desde un EBAIS de la CCSS."
 Usage: #example
+* insert VersionedExampleProfile(cr-patient-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -69,6 +72,7 @@ InstanceOf: CRPatientLaboratoryResult
 Title: "Paciente HbA1c Control Hospitalario"
 Description: "Paciente ejemplo para escenario hospitalario de seguimiento de diabetes con resultado HbA1c alterado."
 Usage: #example
+* insert VersionedExampleProfile(cr-patient-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -93,6 +97,7 @@ InstanceOf: CRSpecimenLaboratoryResult
 Title: "Muestra HbA1c Tamizaje EBAIS"
 Description: "Muestra de sangre venosa para escenario de tamizaje HbA1c en EBAIS."
 Usage: #example
+* insert VersionedExampleProfile(cr-specimen-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -108,6 +113,7 @@ InstanceOf: CRSpecimenLaboratoryResult
 Title: "Muestra HbA1c Seguimiento EBAIS"
 Description: "Muestra de sangre venosa para control periódico de paciente crónico en EBAIS."
 Usage: #example
+* insert VersionedExampleProfile(cr-specimen-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -123,6 +129,7 @@ InstanceOf: CRSpecimenLaboratoryResult
 Title: "Muestra HbA1c Control Hospitalario"
 Description: "Muestra de sangre venosa procesada en un laboratorio hospitalario para seguimiento de diabetes."
 Usage: #example
+* insert VersionedExampleProfile(cr-specimen-laboratory-result)
 
 * language = #es
 * text.status = #generated

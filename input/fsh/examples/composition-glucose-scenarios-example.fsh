@@ -3,6 +3,7 @@ InstanceOf: CRCompositionLaboratoryResult
 Title: "Composition Laboratorio - Glucosa en Ayunas"
 Description: "Ejemplo de Composition para documento clínico de resultado de laboratorio de glucosa en ayunas"
 Usage: #example
+* insert VersionedExampleProfile(cr-composition-laboratory-result)
 
 * language = #es
 * text.status = #generated

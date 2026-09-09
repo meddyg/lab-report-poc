@@ -13,6 +13,7 @@ InstanceOf: CRProvenanceLaboratoryResult
 Title: "Provenance HbA1c - Tamizaje EBAIS"
 Description: "Ejemplo de Provenance que documenta la cadena de custodia del resultado HbA1c de tamizaje generado en el laboratorio del EBAIS Goicoechea 2 y registrado en el repositorio FHIR."
 Usage: #example
+* insert VersionedExampleProfile(cr-provenance-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -36,6 +37,7 @@ InstanceOf: CRProvenanceLaboratoryResult
 Title: "Provenance HbA1c - Seguimiento EBAIS"
 Description: "Ejemplo de Provenance para seguimiento HbA1c donde el resultado fue revisado por el profesional antes de ser registrado en el repositorio. Incluye entidad de origen para documentar la revisión."
 Usage: #example
+* insert VersionedExampleProfile(cr-provenance-laboratory-result)
 
 * language = #es
 * text.status = #generated

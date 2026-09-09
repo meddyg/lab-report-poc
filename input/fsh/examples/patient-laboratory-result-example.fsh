@@ -8,6 +8,7 @@ InstanceOf: CRPatientLaboratoryResult
 Title: "Paciente para Resultados de Laboratorio"
 Description: "Ejemplo de un recurso Patient para representación de PoC resultados de laboratorio."
 Usage: #example
+* insert VersionedExampleProfile(cr-patient-laboratory-result)
 
 * language = #es
 * text.status = #generated

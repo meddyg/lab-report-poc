@@ -7,6 +7,7 @@ InstanceOf: CRDiagnosticReportLaboratoryResult
 Title: "DiagnosticReport Laboratorio - Tamizaje EBAIS (HbA1c)"
 Description: "Ejemplo de DiagnosticReport para tamizaje HbA1c en primer nivel de atención de la CCSS."
 Usage: #example
+* insert VersionedExampleProfile(cr-diagnostic-report-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -28,6 +29,7 @@ InstanceOf: CRDiagnosticReportLaboratoryResult
 Title: "DiagnosticReport Laboratorio - Seguimiento EBAIS (HbA1c)"
 Description: "Ejemplo de DiagnosticReport para seguimiento de paciente en EBAIS con resultado HbA1c alterado."
 Usage: #example
+* insert VersionedExampleProfile(cr-diagnostic-report-laboratory-result)
 
 * language = #es
 * text.status = #generated
@@ -49,6 +51,7 @@ InstanceOf: CRDiagnosticReportLaboratoryResult
 Title: "DiagnosticReport Laboratorio - Control Hospitalario (HbA1c)"
 Description: "Ejemplo de DiagnosticReport emitido por laboratorio hospitalario para paciente con diabetes en seguimiento especializado."
 Usage: #example
+* insert VersionedExampleProfile(cr-diagnostic-report-laboratory-result)
 
 * language = #es
 * text.status = #generated

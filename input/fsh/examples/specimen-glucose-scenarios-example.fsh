@@ -3,6 +3,7 @@ InstanceOf: CRSpecimenLaboratoryResult
 Title: "Specimen Laboratorio - Glucosa en Ayunas"
 Description: "Ejemplo de recurso Specimen para muestra de resultado de laboratorio de glucosa en ayunas"
 Usage: #example
+* insert VersionedExampleProfile(cr-specimen-laboratory-result)
 
 * status = #available
 * type = $sct#119297000

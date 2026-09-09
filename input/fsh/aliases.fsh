@@ -18,3 +18,7 @@ Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
 
 // Terminología FHIR core
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+
+// Fija los ejemplos contra la versión publicada del perfil que declaran.
+RuleSet: VersionedExampleProfile(profileId)
+* meta.profile[0] = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/{profileId}|0.2.0"
