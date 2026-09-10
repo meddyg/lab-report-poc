@@ -9,7 +9,7 @@ Los siguientes recursos están disponibles en esta Guía de Implementación:
 
 #### Paquetes NPM
 - [NPM Package](../package.tgz)
-- [NPM Package Combinado](../package-combined.tgz)
+- [NPM Package en español](../hl7.fhir.cr.meddyg.laboratory-results.es.tgz)
 
 #### Recursos Individuales
 - Consulta la sección de [Artefactos](artifacts.html) para ver todos los perfiles, extensiones y ValueSets disponibles
