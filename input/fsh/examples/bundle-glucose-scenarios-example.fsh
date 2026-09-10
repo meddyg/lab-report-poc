@@ -6,8 +6,10 @@ Usage: #example
 * insert VersionedExampleProfile(cr-bundle-laboratory-result)
 
 * type = #document
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:3b4f2e10-f4ec-4cb1-9f20-e34af2fa7a40"
+// Copia del identificador de la Composition, que es el que la firma cubre.
+// Lo exige el invariante CRBundleIdentMatch1.
+* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.value = "DOC-GLUCOSEFASTING"
 * timestamp = "2024-05-20T09:00:00-06:00"
 
 * entry[composition].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Composition/CompositionGlucoseFastingExample"

@@ -43,14 +43,37 @@ Severity: #error
 Expression: "entry.first().resource.ofType(Composition).exists()"
 
 Invariant: CRBundleJAdESSigFormat1
-Description: "Si existe firma, sigFormat debe declarar JAdES (application/jose o application/jose+json)."
+Description: "Si existe firma, sigFormat debe ser application/jose+json. GAUDI emite la serializacion JSON de JOSE; declarar application/jose hace que los validadores intenten leerla como serializacion compacta y fallen con un error que no dice nada sobre la validez de la firma."
 Severity: #error
-Expression: "sigFormat = 'application/jose' or sigFormat = 'application/jose+json'"
+Expression: "sigFormat = 'application/jose+json'"
 
 Invariant: CRBundleJAdESData1
 Description: "Si existe firma, signature.data debe estar presente en base64Binary."
 Severity: #error
 Expression: "data.exists()"
+
+// ==============================================================================================================
+// Invariantes que compensan el alcance de la firma
+//
+// Medido el 2026-09-09 contra el validador de produccion de GAUDI: el digest cubre
+// todo lo que esta dentro de Bundle.entry —cada recurso, su meta, y hasta el fullUrl
+// de cada entrada— y deja fuera el sobre de la raiz: id, identifier, type, timestamp
+// y meta. Alterar cualquier campo del sobre deja la firma valida.
+//
+// No se puede hacer que la firma cubra el sobre. Lo que si se puede es exigir que el
+// sobre repita informacion que si esta firmada, de modo que alterarlo produzca una
+// contradiccion detectable. Ver la pagina Alcance de la firma digital.
+// ==============================================================================================================
+
+Invariant: CRBundleIdentMatch1
+Description: "Bundle.identifier debe coincidir con Composition.identifier. El identificador del sobre queda fuera del alcance de la firma, asi que se exige que sea copia del que si esta firmado: si alguien re-etiqueta el documento, la copia firmada lo desmiente."
+Severity: #error
+Expression: "identifier.value = entry.resource.ofType(Composition).identifier.value"
+
+Invariant: CRBundleAttester1
+Description: "Un documento firmado debe declarar su atestacion en Composition.attester. Signature.who vive en el sobre y no esta cubierto por la firma, asi que no sirve como declaracion de quien responde por el documento."
+Severity: #error
+Expression: "signature.exists() implies entry.resource.ofType(Composition).attester.exists()"
 
 Profile: CRBundleLaboratoryResult
 Parent: Bundle
@@ -59,21 +82,21 @@ Title: "Bundle Laboratorio"
 Description: "Perfil de Bundle tipo document para intercambio de resultados de laboratorio (HbA1c y glucosa en ayunas) en el PoC de Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-bundle-laboratory-result"
-* ^version = "0.2.0"
+* ^version = "0.3.0"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"
 * ^jurisdiction = urn:iso:std:iso:3166#CR
-* obeys CRBundleDR1 and CRBundleComp1 and CRBundleOBS1 and CRBundleDROBSLink1 and CRBundleCompDRSubj1 and CRBundleCompDRType1 and CRBundleCompFirst1
+* obeys CRBundleDR1 and CRBundleComp1 and CRBundleOBS1 and CRBundleDROBSLink1 and CRBundleCompDRSubj1 and CRBundleCompDRType1 and CRBundleCompFirst1 and CRBundleIdentMatch1 and CRBundleAttester1
 
 * type 1..1 MS
 * type = #document
 * type ^short = "Bundle document"
-* type ^definition = "Indica que el recurso es un Bundle de tipo document, usado para transportar un documento clínico completo de resultados de laboratorio con sus recursos enlazados."
+* type ^definition = "Indica que el recurso es un Bundle de tipo document. ADVERTENCIA: no esta cubierto por la firma digital. Un consumidor debe verificar que exista una Composition conforme al perfil documental y no confiar unicamente en este valor."
 
 * identifier 1..1 MS
 * identifier ^short = "Identificador del documento"
-* identifier ^definition = "Identificador de negocio del Bundle document que permite reconocer de forma única el documento clínico de resultados de laboratorio durante intercambio, almacenamiento o auditoría."
+* identifier ^definition = "Identificador de negocio del Bundle document. ADVERTENCIA: queda fuera del alcance de la firma digital y puede alterarse sin invalidarla. El invariante CRBundleIdentMatch1 exige que coincida con Composition.identifier, que si esta firmado."
 * identifier.system 1..1 MS
 * identifier.system ^short = "Sistema del identificador del documento"
 * identifier.system ^definition = "Namespace o sistema que gobierna el identificador del Bundle document. Permite comprender el origen del identificador en el contexto del PoC."
@@ -83,7 +106,7 @@ Description: "Perfil de Bundle tipo document para intercambio de resultados de l
 
 * timestamp 1..1 MS
 * timestamp ^short = "Fecha de ensamblaje del bundle"
-* timestamp ^definition = "Fecha y hora en que el documento clínico fue ensamblado como Bundle para ser compartido o publicado."
+* timestamp ^definition = "Fecha y hora en que el documento fue ensamblado como Bundle. ADVERTENCIA: no esta cubierto por la firma digital. La fecha autoritativa del documento es Composition.date."
 * timestamp obeys cr-bundle-timestamp-no-future
 
 * total 0..0
@@ -95,23 +118,28 @@ Description: "Perfil de Bundle tipo document para intercambio de resultados de l
 
 * signature 0..1 MS
 * signature ^short = "Firma digital del Bundle document"
-* signature ^definition = "Firma digital del documento clínico en formato JAdES. El contenido firmado se transporta en signature.data como base64Binary."
+* signature ^definition = "Firma digital JAdES emitida por GAUDI. Cubre los recursos dentro de entry[] y no el sobre del Bundle. Ver la pagina Alcance de la firma digital."
 * signature obeys CRBundleJAdESSigFormat1 and CRBundleJAdESData1
-* signature.type 1..* MS
-* signature.type ^short = "Tipo de firma"
-* signature.type ^definition = "Tipo de firma según codificación estándar para indicar el propósito de la firma digital."
-* signature.when 1..1 MS
-* signature.when ^short = "Fecha y hora de la firma"
-* signature.when ^definition = "Instante en que se aplicó la firma digital sobre el Bundle."
-* signature.who 1..1 MS
-* signature.who ^short = "Firmante"
-* signature.who ^definition = "Identidad del actor que realizó la firma digital del Bundle."
+// signature.type, .when y .who viven dentro de Bundle.signature, o sea en el sobre,
+// y NO estan cubiertos por el digest: son alterables sin invalidar la firma. Pasan de
+// obligatorios a opcionales a proposito. Exigirlos invitaba a apoyarse en campos sin
+// respaldo criptografico; la declaracion con valor probatorio es Composition.attester
+// y la identidad verificable es el certificado dentro de signature.data.
+* signature.type 0..* MS
+* signature.type ^short = "Tipo de firma, informativo y NO cubierto por la firma"
+* signature.type ^definition = "Tipo de firma segun codificacion estandar. Informativo: vive en el sobre del Bundle y queda fuera del alcance del digest, asi que no debe usarse como evidencia."
+* signature.when 0..1 MS
+* signature.when ^short = "Fecha de la firma, informativa y NO cubierta por la firma"
+* signature.when ^definition = "Instante en que se aplico la firma. Informativo: la fecha con respaldo criptografico es el sello de tiempo RFC 3161 que viaja dentro de signature.data."
+* signature.who 0..1 MS
+* signature.who ^short = "Firmante declarado, informativo y NO cubierto por la firma"
+* signature.who ^definition = "Identidad declarada del firmante. Informativo y alterable sin invalidar la firma. La declaracion con valor probatorio es Composition.attester, y la identidad verificable es el certificado dentro de signature.data."
 * signature.sigFormat 1..1 MS
 * signature.sigFormat ^short = "Formato de firma"
 * signature.sigFormat ^definition = "Formato de la firma digital. Para este perfil se utiliza JAdES (application/jose o application/jose+json)."
 * signature.data 1..1 MS
 * signature.data ^short = "Firma JAdES en base64"
-* signature.data ^definition = "Contenido de la firma digital JAdES codificado en base64Binary para su transporte en FHIR."
+* signature.data ^definition = "Objeto JOSE en serializacion JSON, codificado en base64. GAUDI lo devuelve sin relleno, asi que un verificador debe usar un decodificador tolerante."
 
 * entry 5..* MS
 * entry ^short = "Entradas del documento clínico"

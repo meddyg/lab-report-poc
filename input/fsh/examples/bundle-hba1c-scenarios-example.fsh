@@ -10,8 +10,10 @@ Usage: #example
 * insert VersionedExampleProfile(cr-bundle-laboratory-result)
 
 * type = #document
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:3bc0ecdb-a8ed-4ad7-9d25-e96c308cf8c4"
+// Copia del identificador de la Composition, que es el que la firma cubre.
+// Lo exige el invariante CRBundleIdentMatch1.
+* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.value = "DOC-HBA1CTAMIZAJEEBAIS"
 * timestamp = "2026-04-08T08:30:00-06:00"
 
 * entry[composition].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Composition/CompositionHbA1cTamizajeEBAISExample"
@@ -52,8 +54,10 @@ Usage: #example
 * insert VersionedExampleProfile(cr-bundle-laboratory-result)
 
 * type = #document
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:ef194e0a-166f-4f5d-9f6f-c30167a61657"
+// Copia del identificador de la Composition, que es el que la firma cubre.
+// Lo exige el invariante CRBundleIdentMatch1.
+* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.value = "DOC-HBA1CSEGUIMIENTOEBAIS"
 * timestamp = "2026-04-08T09:45:00-06:00"
 
 * entry[composition].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Composition/CompositionHbA1cSeguimientoEBAISExample"
@@ -94,8 +98,10 @@ Usage: #example
 * insert VersionedExampleProfile(cr-bundle-laboratory-result)
 
 * type = #document
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:75534dfc-7519-4201-b7f9-78bb5532c51d"
+// Copia del identificador de la Composition, que es el que la firma cubre.
+// Lo exige el invariante CRBundleIdentMatch1.
+* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.value = "DOC-HBA1CHOSPITALCONTROL"
 * timestamp = "2026-04-08T10:40:00-06:00"
 
 * entry[composition].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Composition/CompositionHbA1cHospitalControlExample"

@@ -7,7 +7,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 
 * name = "ReporteProveedorIdentifierNamingSystem"
-* version = "0.2.0"
+* version = "0.3.0"
 * status = #active
 * kind = #identifier
 * date = "2026-05-22"

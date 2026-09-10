@@ -8,7 +8,7 @@ Usage: #definition
 
 * name = "DIMEXCRNamingSystem"
 * title = "DIMEX - Documento de Identificación Migratorio para Extranjeros"
-* version = "0.2.0"
+* version = "0.3.0"
 * status = #active
 * kind = #identifier
 * date = "2026-05-14"

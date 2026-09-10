@@ -14,7 +14,7 @@ description: >-
   de resultados de laboratorio clínico en Costa Rica, con un enfoque específico en la integración
   con las soluciones de Meddyg y Siftia.
 status: draft # draft | active | retired | unknown
-version: 0.2.0
+version: 0.3.0
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: ci-build
@@ -54,6 +54,8 @@ pages:
     title: Inicio
   revision-semantica.md:
     title: Relacion Semantica Bundle-PDF
+  alcance-de-la-firma.md:
+    title: Alcance de la Firma Digital
   seguridad-trazabilidad.md:
     title: Seguridad y Trazabilidad
   credits.md:
@@ -101,6 +103,7 @@ menu:
   Artefactos: artifacts.html
   Revision Semantica: revision-semantica.html
   Seguridad y Trazabilidad: seguridad-trazabilidad.html
+  Alcance de la Firma: alcance-de-la-firma.html
   Créditos: credits.html
   Descargas: downloads.html
 

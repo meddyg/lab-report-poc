@@ -15,7 +15,7 @@ Title: "Observation Laboratorio"
 Description: "Perfil de observación para representar resultados de laboratorio (HbA1c y glucosa en ayunas) en el PoC de resultados de laboratorio en Costa Rica."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-observation-laboratory-result"
-* ^version = "0.2.0"
+* ^version = "0.3.0"
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "MEDDYG"

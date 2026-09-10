@@ -12,6 +12,13 @@ Usage: #example
 * language = #es
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de tamizaje HbA1c emitido por EBAIS.</p></div>"
+* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.value = "DOC-HBA1CTAMIZAJEEBAIS"
+// La atestacion vive aqui y no en Signature.who: el sobre del Bundle no
+// esta cubierto por la firma. Ver la pagina Alcance de la firma digital.
+* attester[0].mode = http://hl7.org/fhir/composition-attestation-mode#legal
+* attester[0].time = "2026-04-08T08:30:00-06:00"
+* attester[0].party = Reference(PractitionerRoleEBAISGoicoechea2LabExample)
 * status = #final
 * type = $loinc#11502-2
 * subject = Reference(PatientHbA1cTamizajeEBAISExample)
@@ -32,6 +39,13 @@ Usage: #example
 * language = #es
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de seguimiento HbA1c en primer nivel de atención.</p></div>"
+* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.value = "DOC-HBA1CSEGUIMIENTOEBAIS"
+// La atestacion vive aqui y no en Signature.who: el sobre del Bundle no
+// esta cubierto por la firma. Ver la pagina Alcance de la firma digital.
+* attester[0].mode = http://hl7.org/fhir/composition-attestation-mode#legal
+* attester[0].time = "2026-04-08T09:45:00-06:00"
+* attester[0].party = Reference(PractitionerRoleEBAISGoicoechea2LabExample)
 * status = #final
 * type = $loinc#11502-2
 * subject = Reference(PatientHbA1cSeguimientoEBAISExample)
@@ -52,6 +66,13 @@ Usage: #example
 * language = #es
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de resultado HbA1c emitido por laboratorio hospitalario.</p></div>"
+* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.value = "DOC-HBA1CHOSPITALCONTROL"
+// La atestacion vive aqui y no en Signature.who: el sobre del Bundle no
+// esta cubierto por la firma. Ver la pagina Alcance de la firma digital.
+* attester[0].mode = http://hl7.org/fhir/composition-attestation-mode#legal
+* attester[0].time = "2026-04-08T10:40:00-06:00"
+* attester[0].party = Reference(PractitionerRoleHospitalMexicoLabExample)
 * status = #final
 * type = $loinc#11502-2
 * subject = Reference(PatientHbA1cHospitalControlExample)

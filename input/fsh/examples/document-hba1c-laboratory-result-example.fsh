@@ -91,6 +91,13 @@ Usage: #example
 * language = #es
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de resultados de laboratorio para prueba HbA1c.</p></div>"
+* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.value = "DOC-HBA1C"
+// La atestacion vive aqui y no en Signature.who: el sobre del Bundle no
+// esta cubierto por la firma. Ver la pagina Alcance de la firma digital.
+* attester[0].mode = http://hl7.org/fhir/composition-attestation-mode#legal
+* attester[0].time = "2026-04-07T09:35:00-06:00"
+* attester[0].party = Reference(PractitionerRoleHospitalMexicoLabExample)
 * status = #final
 * type = $loinc#11502-2
 * subject = Reference(PatientLaboratoryResultExample)
@@ -109,13 +116,15 @@ Usage: #example
 * insert VersionedExampleProfile(cr-bundle-laboratory-result)
 
 * type = #document
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:1a7b4f24-6ec0-4e08-9e63-e0d7d4795bd8"
+// El identificador del sobre es copia del de la Composition, que es el que la
+// firma cubre. Lo exige el invariante CRBundleIdentMatch1.
+* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.value = "DOC-HBA1C"
 * timestamp = "2026-04-07T09:35:00-06:00"
 * signature.type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1
 * signature.when = "2026-04-07T09:36:00-06:00"
 * signature.who = Reference(PractitionerRoleHospitalMexicoLabExample)
-* signature.sigFormat = #application/jose
+* signature.sigFormat = #application/jose+json
 * signature.data = "ZXlKaGJHY2lPaUp1YjI1bEluMC5leUpwYzNNaU9pSnRaV1JrZVdjaUxDSnpkV0lpT2lKaWRXNWtiR1VpZlEu"
 
 * entry[composition].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Composition/CompositionHbA1cLaboratoryResultExample"
