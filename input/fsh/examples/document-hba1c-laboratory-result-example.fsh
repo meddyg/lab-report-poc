@@ -91,7 +91,7 @@ Usage: #example
 * language = #es
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de resultados de laboratorio para prueba HbA1c.</p></div>"
-* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/documento-clinico"
 * identifier.value = "DOC-HBA1C"
 // La atestacion vive aqui y no en Signature.who: el sobre del Bundle no
 // esta cubierto por la firma. Ver la pagina Alcance de la firma digital.
@@ -118,7 +118,7 @@ Usage: #example
 * type = #document
 // El identificador del sobre es copia del de la Composition, que es el que la
 // firma cubre. Lo exige el invariante CRBundleIdentMatch1.
-* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/documento-clinico"
 * identifier.value = "DOC-HBA1C"
 * timestamp = "2026-04-07T09:35:00-06:00"
 * signature.type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1

@@ -68,7 +68,7 @@ Expression: "data.exists()"
 Invariant: CRBundleIdentMatch1
 Description: "Bundle.identifier debe coincidir con Composition.identifier. El identificador del sobre queda fuera del alcance de la firma, asi que se exige que sea copia del que si esta firmado: si alguien re-etiqueta el documento, la copia firmada lo desmiente."
 Severity: #error
-Expression: "identifier.value = entry.resource.ofType(Composition).identifier.value"
+Expression: "identifier.value = entry.resource.ofType(Composition).identifier.value.single()"
 
 Invariant: CRBundleAttester1
 Description: "Un documento firmado debe declarar su atestacion en Composition.attester. Signature.who vive en el sobre y no esta cubierto por la firma, asi que no sirve como declaracion de quien responde por el documento."

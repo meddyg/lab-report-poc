@@ -8,7 +8,7 @@ Usage: #example
 * type = #document
 // Copia del identificador de la Composition, que es el que la firma cubre.
 // Lo exige el invariante CRBundleIdentMatch1.
-* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/documento-clinico"
 * identifier.value = "DOC-GLUCOSEFASTING"
 * timestamp = "2024-05-20T09:00:00-06:00"
 

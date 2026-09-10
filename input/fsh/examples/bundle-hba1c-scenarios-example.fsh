@@ -12,7 +12,7 @@ Usage: #example
 * type = #document
 // Copia del identificador de la Composition, que es el que la firma cubre.
 // Lo exige el invariante CRBundleIdentMatch1.
-* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/documento-clinico"
 * identifier.value = "DOC-HBA1CTAMIZAJEEBAIS"
 * timestamp = "2026-04-08T08:30:00-06:00"
 
@@ -56,7 +56,7 @@ Usage: #example
 * type = #document
 // Copia del identificador de la Composition, que es el que la firma cubre.
 // Lo exige el invariante CRBundleIdentMatch1.
-* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/documento-clinico"
 * identifier.value = "DOC-HBA1CSEGUIMIENTOEBAIS"
 * timestamp = "2026-04-08T09:45:00-06:00"
 
@@ -100,7 +100,7 @@ Usage: #example
 * type = #document
 // Copia del identificador de la Composition, que es el que la firma cubre.
 // Lo exige el invariante CRBundleIdentMatch1.
-* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/documento-clinico"
 * identifier.value = "DOC-HBA1CHOSPITALCONTROL"
 * timestamp = "2026-04-08T10:40:00-06:00"
 

@@ -8,7 +8,7 @@ Usage: #example
 * language = #es
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml' lang='es' xml:lang='es'><p>Documento clínico de resultado de glucosa en ayunas.</p></div>"
-* identifier.system = "https://hl7.meddyg.com/fhir/sid/documento-clinico"
+* identifier.system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/documento-clinico"
 * identifier.value = "DOC-GLUCOSEFASTING"
 // La atestacion vive aqui y no en Signature.who: el sobre del Bundle no
 // esta cubierto por la firma. Ver la pagina Alcance de la firma digital.
