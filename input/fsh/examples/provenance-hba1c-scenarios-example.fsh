@@ -71,3 +71,22 @@ Usage: #example
 * active = true
 * contact[0].telecom[0].system = #url
 * contact[0].telecom[0].value = "https://meddyg.com"
+
+Instance: DetachedSignatureHbA1cLaboratoryResultExample
+InstanceOf: CRDetachedSignatureProvenanceLaboratoryResult
+Title: "Firma Detached HbA1c"
+Description: "Ejemplo estructural de la evidencia JAdES detached para una version inmutable del Bundle document HbA1c. El valor de firma es ilustrativo y no debe usarse como evidencia criptografica."
+Usage: #example
+* insert VersionedExampleProfile(cr-detached-signature-provenance-laboratory-result)
+
+* target[0].reference = "Bundle/BundleHbA1cLaboratoryResultDocumentExample/_history/1"
+* recorded = "2026-04-07T09:36:00-06:00"
+* agent[0].who = Reference(OrganizationHospitalMexicoLabExample)
+* signature[0].type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1
+* signature[0].when = "2026-04-07T09:36:00-06:00"
+* signature[0].who = Reference(PractitionerRoleHospitalMexicoLabExample)
+* signature[0].targetFormat = #application/fhir+json
+* signature[0].sigFormat = #application/jose+json
+* signature[0].data = "ZXlKaGJHY2lPaUp1YjI1bEluMC5leUpwYzNNaU9pSnRaV1JrZVdjaUxDSnpkV0lpT2lKaWRXNWtiR1VpZlEu"
+* extension[payloadHash].valueString = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+* extension[canonicalization].valueString = "JCS RFC 8785"

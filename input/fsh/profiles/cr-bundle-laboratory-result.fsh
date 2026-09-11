@@ -42,16 +42,6 @@ Description: "La primera entrada del documento debe ser Composition."
 Severity: #error
 Expression: "entry.first().resource.ofType(Composition).exists()"
 
-Invariant: CRBundleJAdESSigFormat1
-Description: "Si existe firma, sigFormat debe ser application/jose+json. GAUDI emite la serializacion JSON de JOSE; declarar application/jose hace que los validadores intenten leerla como serializacion compacta y fallen con un error que no dice nada sobre la validez de la firma."
-Severity: #error
-Expression: "sigFormat = 'application/jose+json'"
-
-Invariant: CRBundleJAdESData1
-Description: "Si existe firma, signature.data debe estar presente en base64Binary."
-Severity: #error
-Expression: "data.exists()"
-
 // ==============================================================================================================
 // Invariantes que compensan el alcance de la firma
 //
@@ -71,15 +61,15 @@ Severity: #error
 Expression: "identifier.value = entry.resource.ofType(Composition).identifier.value.single()"
 
 Invariant: CRBundleAttester1
-Description: "Un documento firmado debe declarar su atestacion en Composition.attester. Signature.who vive en el sobre y no esta cubierto por la firma, asi que no sirve como declaracion de quien responde por el documento."
+Description: "El documento debe declarar su atestacion en Composition.attester. La firma detached se conserva en Provenance y la declaracion clinica de responsabilidad debe vivir dentro de entry[]."
 Severity: #error
-Expression: "signature.exists() implies entry.resource.ofType(Composition).attester.exists()"
+Expression: "entry.resource.ofType(Composition).attester.exists()"
 
 Profile: CRBundleLaboratoryResult
 Parent: Bundle
 Id: cr-bundle-laboratory-result
 Title: "Bundle Laboratorio"
-Description: "Perfil de Bundle tipo document para intercambio de resultados de laboratorio (HbA1c y glucosa en ayunas) en el PoC de Costa Rica."
+Description: "Perfil de Bundle tipo document para intercambio de resultados de laboratorio (HbA1c y glucosa en ayunas) en el PoC de Costa Rica. La firma digital JAdES se conserva de forma detached en CRDetachedSignatureProvenanceLaboratoryResult."
 
 * ^url = "https://hl7.meddyg.com/fhir/laboratory-results/StructureDefinition/cr-bundle-laboratory-result"
 * ^version = "0.3.0"
@@ -116,30 +106,9 @@ Description: "Perfil de Bundle tipo document para intercambio de resultados de l
 * link ^short = "Sin links globales"
 * link ^definition = "No se utilizan enlaces de navegación en el Bundle document del PoC, ya que se trata de un paquete clínico cerrado y no de una respuesta de búsqueda."
 
-* signature 0..1 MS
-* signature ^short = "Firma digital del Bundle document"
-* signature ^definition = "Firma digital JAdES emitida por GAUDI. Cubre los recursos dentro de entry[] y no el sobre del Bundle. Ver la pagina Alcance de la firma digital."
-* signature obeys CRBundleJAdESSigFormat1 and CRBundleJAdESData1
-// signature.type, .when y .who viven dentro de Bundle.signature, o sea en el sobre,
-// y NO estan cubiertos por el digest: son alterables sin invalidar la firma. Pasan de
-// obligatorios a opcionales a proposito. Exigirlos invitaba a apoyarse en campos sin
-// respaldo criptografico; la declaracion con valor probatorio es Composition.attester
-// y la identidad verificable es el certificado dentro de signature.data.
-* signature.type 0..* MS
-* signature.type ^short = "Tipo de firma, informativo y NO cubierto por la firma"
-* signature.type ^definition = "Tipo de firma segun codificacion estandar. Informativo: vive en el sobre del Bundle y queda fuera del alcance del digest, asi que no debe usarse como evidencia."
-* signature.when 0..1 MS
-* signature.when ^short = "Fecha de la firma, informativa y NO cubierta por la firma"
-* signature.when ^definition = "Instante en que se aplico la firma. Informativo: la fecha con respaldo criptografico es el sello de tiempo RFC 3161 que viaja dentro de signature.data."
-* signature.who 0..1 MS
-* signature.who ^short = "Firmante declarado, informativo y NO cubierto por la firma"
-* signature.who ^definition = "Identidad declarada del firmante. Informativo y alterable sin invalidar la firma. La declaracion con valor probatorio es Composition.attester, y la identidad verificable es el certificado dentro de signature.data."
-* signature.sigFormat 1..1 MS
-* signature.sigFormat ^short = "Formato de firma"
-* signature.sigFormat ^definition = "Formato de la firma digital. Para este perfil se utiliza JAdES (application/jose o application/jose+json)."
-* signature.data 1..1 MS
-* signature.data ^short = "Firma JAdES en base64"
-* signature.data ^definition = "Objeto JOSE en serializacion JSON, codificado en base64. GAUDI lo devuelve sin relleno, asi que un verificador debe usar un decodificador tolerante."
+* signature 0..0
+* signature ^short = "Sin firma embebida"
+* signature ^definition = "La firma digital se conserva de forma detached en un Provenance conforme a CRDetachedSignatureProvenanceLaboratoryResult. El Bundle clinico no se modifica despues de persistirse."
 
 * entry 5..* MS
 * entry ^short = "Entradas del documento clínico"

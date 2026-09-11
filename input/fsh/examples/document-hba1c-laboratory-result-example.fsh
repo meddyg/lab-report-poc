@@ -121,12 +121,6 @@ Usage: #example
 * identifier.system = "https://hl7.meddyg.com/fhir/laboratory-results/sid/documento-clinico"
 * identifier.value = "DOC-HBA1C"
 * timestamp = "2026-04-07T09:35:00-06:00"
-* signature.type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1
-* signature.when = "2026-04-07T09:36:00-06:00"
-* signature.who = Reference(PractitionerRoleHospitalMexicoLabExample)
-* signature.sigFormat = #application/jose+json
-* signature.data = "ZXlKaGJHY2lPaUp1YjI1bEluMC5leUpwYzNNaU9pSnRaV1JrZVdjaUxDSnpkV0lpT2lKaWRXNWtiR1VpZlEu"
-
 * entry[composition].fullUrl = "https://hl7.meddyg.com/fhir/laboratory-results/Composition/CompositionHbA1cLaboratoryResultExample"
 * entry[composition].resource = CompositionHbA1cLaboratoryResultExample
 
